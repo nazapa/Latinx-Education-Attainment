@@ -1,0 +1,94 @@
+---
+title: "Latinx ACS Census Data (2012-2020)"
+author: "Paula"
+date: "5/31/2022"
+output: 
+  bookdown::html_document2:
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, out.width= "100%")
+## libraries
+library(tidyverse)
+library(ggplot2) 
+library(scales)
+library(haven)
+
+
+## datasets
+data_dir <- "datasets"
+load(file = file.path(data_dir, 'datasets.RData'))
+
+theme_set(
+  theme(
+    text = element_text(size = 7),
+    panel.background = element_blank(),
+    plot.title = element_text(color = '#444444', size = 7, face = 'bold', hjust = 0.5),
+    axis.ticks = element_blank(),
+    axis.title = element_text(face = 'bold'),
+    legend.title = element_text(face = 'bold'),
+    legend.key.size = unit(0.3, 'cm'),
+    strip.text.x = element_text(size = 7, face = 'bold', hjust = 0.5),
+    strip.background = element_rect(fill = NA, color = NA)
+  )
+)
+```
+
+## Graphs: Education Attainment (2012-2020)
+
+### ACS1 - Education Attainment Level in Los Angeles County
+```{r temp-edu-attain1, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels for Los Angeles County, California (2012-2020)"}
+## ACS1 - Education Attainment Level, County Level
+temp_edu_attain1 <- acs1_county_data %>% 
+  select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
+  mutate(C15002I_012E = C15002I_003E + C15002I_008E,
+         C15002I_013E = C15002I_004E + C15002I_009E,
+         C15002I_014E = C15002I_005E + C15002I_010E,
+         C15002I_015E = C15002I_006E + C15002I_011E) %>%
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'attainment',         
+    values_to = 'values') %>%
+  mutate(gender = case_when(attainment %in%
+                              c("C15002I_002E", "C15002I_003E", "C15002I_004E", "C15002I_005E", "C15002I_006E") ~ "latino male",
+                            attainment %in%
+                              c("C15002I_007E", "C15002I_008E", "C15002I_009E", "C15002I_010E", "C15002I_011E") ~ "latina female",
+                            TRUE ~ "total"
+  ),
+  education_level = case_when(attainment %in%
+                                c("C15002I_003E", "C15002I_008E", "C15002I_012E") ~ "less than a high school diploma",
+                              attainment %in%
+                                c("C15002I_004E", "C15002I_009E", "C15002I_013E") ~ "high school graduate",
+                              attainment %in%
+                                c("C15002I_005E", "C15002I_010E", "C15002I_014E") ~ "some college or associate’s degree",
+                              attainment %in%
+                                c("C15002I_006E", "C15002I_011E", "C15002I_015E") ~ "bachelor’s degree or higher",
+                              TRUE ~ "total")
+  ) %>% 
+  filter(education_level != "total", gender != "total") %>%
+  group_by(GEOID, NAME, YEAR, gender) %>% 
+  mutate(pct = values/sum(values))
+
+# Graph, Los Angeles County
+temp_edu_attain1 %>% filter(NAME == "Los Angeles County, California") %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + 
+  ggtitle('Latinx Education Attainment Levels in Los Angeles County, California (2012-2020)') + 
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+In Figure \@ref(fig:temp-edu-attain1), we can see more closely the Latinx education attainment levels in the
+Los Angeles County, California. In this line graph, we can see that the educational attainment levels of Latinx remain low for the attainment of a bachelor’s degree or higher, followed by some college or associate’s degree, high school diploma, and less than a high school diploma. From this line graph, we can see that Latinx students in Los Angeles County, California between 2012-2020 have not earned many bachelor’s degrees or higher degrees and have earned less than a high school diploma. Still, it seems that between 2012-2020, there has been an upward trend in the number of Latinx students attaining bachelor’s degrees or higher degrees and the number of Latinx students attaining less than a high school diploma has been steadily decreasing. 
+
+
+### ACS1 - Education Attainment Level in the following counties: Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, San Diego County, CA
+```{r fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels for Bexar County, Texas; Cook County, Illinois; Los Angeles County, California; Maricopa County, Arizona; Orange County, California; Riverside County, California; San Bernardino County, California; San Diego County, California (2012-2020)"}
+# graph, counties: Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, San Diego County, CA
+temp_edu_attain1 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+                                        "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('Latinx Education Attainment Levels in Counties Most Populated By Latinx (2012-2020)') + 
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
