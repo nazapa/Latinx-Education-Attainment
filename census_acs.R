@@ -1381,8 +1381,9 @@ ggsave(path = "graphs","acs5_enrollment_states.png", width = 10,   height = 6)
 
 
 
-## Ethnic/Racial Groups
-## acs1 - education attainment, county level
+##### Ethnic/Racial Groups ####
+## acs1 - education attainment, county level (total educational attainment rates (aggregated from: total less than a high school diploma, 
+## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race13 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
   pivot_longer(
@@ -1417,7 +1418,8 @@ ggsave(path = "graphs","acs1_attainment_counties_race.png", width = 10,   height
 
 
 
-## acs1 - education attainment, metro level
+## acs1 - education attainment, metro level (total educational attainment rates (aggregated from: total less than a high school diploma, 
+## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race14 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
   pivot_longer(
@@ -1485,7 +1487,8 @@ ggsave(path = "graphs","acs1_attainment_metro_providence_race.png", width = 10, 
 
 
 
-## acs1 - education attainment, state level
+## acs1 - education attainment, state level (total educational attainment rates (aggregated from: total less than a high school diploma, 
+## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race15 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
   pivot_longer(
@@ -1520,7 +1523,8 @@ ggsave(path = "graphs","acs1_attainment_states_race.png", width = 10,   height =
 
 
 
-## acs5 - education attainment, county level
+## acs5 - education attainment, county level (total educational attainment rates (aggregated from: total less than a high school diploma, 
+## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race16 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
   pivot_longer(
@@ -1555,7 +1559,8 @@ ggsave(path = "graphs","acs1_attainment_counties_race.png", width = 10,   height
 
 
 
-## acs5 - education attainment, metro level
+## acs5 - education attainment, metro level (total educational attainment rates (aggregated from: total less than a high school diploma, 
+## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race17 <- acs5_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
   pivot_longer(
@@ -1622,9 +1627,10 @@ ggsave(path = "graphs","acs5_attainment_metro_providence_race.png", width = 10, 
 
 
 
-## acs5 - education attainment, state level
+## acs5 - education attainment, state level, (total educational attainment rates (aggregated from: total less than a high school diploma, 
+## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race18 <- acs5_state_data %>% 
-  select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
+  select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
     names_to = 'race',         
@@ -1658,9 +1664,10 @@ ggsave(path = "graphs","acs5_attainment_states_race.png", width = 10,   height =
 
 
 
-## acs1 - education enrollment, county level
+## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school,
+## k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race19 <- acs1_county_data %>% 
-  select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
     names_to = 'race',         
@@ -1692,7 +1699,8 @@ ggsave(path = "graphs","acs1_enrollment_counties_race.pdf", width = 10,   height
 ggsave(path = "graphs","acs1_enrollment_counties_race.png", width = 10,   height = 6)
 
 
-## acs1 - education enrollment, metro level
+## acs1 - education enrollment, metro level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school,
+## k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race20 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
   pivot_longer(
@@ -1758,7 +1766,8 @@ ggsave(path = "graphs","acs1_enrollment_metro_providence_race.pdf", width = 10, 
 ggsave(path = "graphs","acs1_enrollment_metro_providence_race.png", width = 10,   height = 6)
 
 
-## acs1 - education enrollment, state level
+## acs1 - education enrollment, state level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school,
+## k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race21 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
   pivot_longer(
@@ -1790,7 +1799,8 @@ ggsave(path = "graphs","acs1_enrollment_states_race.pdf", width = 10,   height =
 ggsave(path = "graphs","acs1_enrollment_states_race.png", width = 10,   height = 6)
 
 
-## acs5 - education enrollment, county level
+## acs5 - education enrollment, county level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school,
+## k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race22 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
   pivot_longer(
@@ -1824,7 +1834,8 @@ ggsave(path = "graphs","acs5_enrollment_counties_race.pdf", width = 10,   height
 ggsave(path = "graphs","acs5_enrollment_counties_race.png", width = 10,   height = 6)
 
 
-## acs5 - education enrollment, metro level
+## acs5 - education enrollment, metro level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school,
+## k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race23 <- acs5_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
   pivot_longer(
@@ -1891,7 +1902,8 @@ ggsave(path = "graphs","acs5_enrollment_metro_providence_race.png", width = 10, 
 
 
 
-## acs5 - education enrollment, state level
+## acs5 - education enrollment, state level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school,
+## k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race24 <- acs5_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
   pivot_longer(
@@ -1921,4 +1933,445 @@ temp_edu_enr_race24 %>% filter(NAME %in% c("California", "Texas", "Florida", "Ne
   theme(plot.title = element_text(hjust = 0.5))
 ggsave(path = "graphs","acs5_enrollnment_states_race.pdf", width = 10,   height = 6)
 ggsave(path = "graphs","acs5_enrollment_states_race.png", width = 10,   height = 6)
+
+
+
+
+
+
+
+
+
+
+## ENROLLMENT IN NURSERY SCHOOL ###
+## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in nursery school)
+temp_edu_enr_race25 <- acs1_county_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_003E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_003E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_003E" = "Black", 
+      "B14007C_003E" = "American Indian and Alaska Native",
+      "B14007D_003E" = "Asian",
+      "B14007E_003E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_003E" = "Other",
+      "B14007G_003E" = "Two or More Races",
+      "B14007H_003E" = "white",
+      "B14007I_003E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+## graphs, counties
+## counties
+temp_edu_enr_race25 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+                                           "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('Education Enrollment Levels in Counties By Race (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs1_enrollment_counties_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs1_enrollment_counties_race.png", width = 10,   height = 6)
+
+
+
+## acs1 - education enrollment, state level, (educational enrollment rates of students enrolled in nursery school)
+temp_edu_enr_race26 <- acs1_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_003E")) %>% 
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_003E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_003E" = "Black", 
+      "B14007C_003E" = "American Indian and Alaska Native",
+      "B14007D_003E" = "Asian",
+      "B14007E_003E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_003E" = "Other",
+      "B14007G_003E" = "Two or More Races",
+      "B14007H_003E" = "white",
+      "B14007I_003E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+# graph, states: CA, TX, FL, NY
+temp_edu_enr_race26 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('Education Enrollment Levels By Race in States Most Populated By Latinx (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs1_enrollment_states_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs1_enrollment_states_race.png", width = 10,   height = 6)
+
+
+## acs1 - education enrollment, metro level, (educational enrollment rates of students enrolled in nursery school)
+temp_edu_enr_race27 <- acs1_metro_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_003E")) %>% 
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_003E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_003E" = "Black", 
+      "B14007C_003E" = "American Indian and Alaska Native",
+      "B14007D_003E" = "Asian",
+      "B14007E_003E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_003E" = "Other",
+      "B14007G_003E" = "Two or More Races",
+      "B14007H_003E" = "white",
+      "B14007I_003E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area;
+# Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; 
+# Providence-Warwick, RI-MA Metro Area
+temp_edu_enr_race27 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_la_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_la_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race27 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_ny_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_ny_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race27 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_miami_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_miami_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race27 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_dmv_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_dmv_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race27 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_providence_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_providence_race.png", width = 10,   height = 6)
+
+
+
+
+
+
+
+
+## ENROLLMENT IN COLLEGE/UNIVERSITIES ### 
+B14007I_017E = enrolled in college/universities
+## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in college/universities)
+temp_edu_enr_race28 <- acs1_county_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+## graphs, counties
+## counties
+temp_edu_enr_race28 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+                                           "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('Education Enrollment Levels in Counties By Race (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+## acs1 - education enrollment, metro level, (educational enrollment rates of students enrolled in college/universities)
+temp_edu_enr_race29 <- acs1_metro_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area;
+# Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; 
+# Providence-Warwick, RI-MA Metro Area
+temp_edu_enr_race29 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_la_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_la_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race29 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_ny_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_ny_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race29 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_miami_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_miami_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race29 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_dmv_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_dmv_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race29 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_providence_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_providence_race.png", width = 10,   height = 6)
+
+## acs1 - education enrollment, state level, (educational enrollment rates of students enrolled in college/universities)
+temp_edu_enr_race30 <- acs1_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+# graph, states: CA, TX, FL, NY
+temp_edu_enr_race30 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('Education Enrollment Levels By Race in States Most Populated By Latinx (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+## ENROLLMENT IN GRAD OR PROFESSIONAL SCHOOL ###
+B14007I_018E = enrolled in graduate or professional school
+## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in graduate or professional school)
+temp_edu_enr_race31 <- acs1_county_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+## graphs, counties
+## counties
+temp_edu_enr_race31 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+                                           "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('Education Enrollment Levels in Counties By Race (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+
+## acs1 - education enrollment, metro level, (educational enrollment rates of students enrolled in graduate or professional school)
+temp_edu_enr_race32 <- acs1_metro_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area;
+# Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; 
+# Providence-Warwick, RI-MA Metro Area
+temp_edu_enr_race32 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_la_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_la_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race32 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_ny_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_ny_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race32 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_miami_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_miami_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race32 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_dmv_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_dmv_race.png", width = 10,   height = 6)
+
+temp_edu_enr_race32 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  ggtitle('Education Enrollment Levels By Race in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+ggsave(path = "graphs","acs5_enrollment_metro_providence_race.pdf", width = 10,   height = 6)
+ggsave(path = "graphs","acs5_enrollment_metro_providence_race.png", width = 10,   height = 6)
+
+## acs1 - education enrollment, state level, (educational enrollment rates of students enrolled in graduate or professional school)
+temp_edu_enr_race33 <- acs1_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+# graph, states: CA, TX, FL, NY
+temp_edu_enr_race33 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('Enrollment Levels in Graduate School By Race in States Most Populated By Latinx (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+
+## ENROLLMENT IN K-12 SCHOOL ### UNABLE TO GET GRAPHS HERE
+B14007I_020E = enrolled in kinder-grade12 
+## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in K-12 school)
+temp_edu_enr_race34 <- acs1_county_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_020E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_020E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_020E" = "Black", 
+      "B14007C_020E" = "American Indian and Alaska Native",
+      "B14007D_020E" = "Asian",
+      "B14007E_020E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_020E" = "Other",
+      "B14007G_020E" = "Two or More Races",
+      "B14007H_020E" = "white",
+      "B14007I_020E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+## graphs, counties
+## counties
+temp_edu_enr_race34 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+                                           "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('K-12 School Enrollment Levels in Counties By Race (2012-2020)') + 
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5))
+
+## acs1 - education enrollment, metro level, (educational enrollment rates of students enrolled in K-12 school)
+## acs1 - education enrollment, state level, (educational enrollment rates of students enrolled in K-12 school)
 

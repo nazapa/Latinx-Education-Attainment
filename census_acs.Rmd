@@ -1,7 +1,7 @@
 ---
-title: "Latinx ACS Census Data (2012-2020)"
-author: "Paula"
-date: "5/31/2022"
+title: "Latinx Education Attainment and Enrollment Levels Using the American Community Survey (ACS) Census Data (2012-2020)"
+author: "Paula Nazario, UCLA MPP Student at the UCLA Luskin School of Public Affairs"
+date: "May 31, 2022"
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -14,7 +14,6 @@ library(tidyverse)
 library(ggplot2) 
 library(scales)
 library(haven)
-
 
 ## datasets
 data_dir <- "datasets"
@@ -35,10 +34,196 @@ theme_set(
 )
 ```
 
-## Graphs: Education Attainment (2012-2020)
+### Research Questions
+1. How has the educational attainment levels for Latinx students changed in the past 8 years (e.g., 2012-2020) in areas that are highly populated by Latinx communities?
+    a. How has the educational attainment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the state level?
+    b. How has the educational attainment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the metropolitan level?
+    c. How has the educational attainment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the county level?
 
-### ACS1 - Education Attainment Level in Los Angeles County
-```{r temp-edu-attain1, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels for Los Angeles County, California (2012-2020)"}
+2. How has the educational enrollment levels for Latinx students changed in the past 8 years (e.g., 2012-2020) in areas that are highly populated by Latinx communities?
+    a. How has the educational enrollment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the state level?
+    b. How has the educational enrollment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the metropolitan level?
+    c. How has the educational enrollment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the county level?
+
+### Latinx Student Educational Outcomes
+[BACKGROUND HERE; NEED ASSISTANCE INCLUDING CITATIONS HERE]
+
+
+### LATINX EDUCATION ATTAINMENT OUTCOMES (2012-2020)
+
+### ACS1 - Latinx Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
+I used the ACS 1-year and ACS 5-year level data to determine the educational attainment levels of Latinx students between 2012 and 2020 in the following states: California, Texas, Florida, and New York. All of these states have seen an increase in the Latinx population since 2010. Therefore, I want to generate line graphs of the educational attainment levels of Latinxs in each state individually and then compare them against each other to analyze any patterns in the educational levels of each state. 
+
+```{r fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)"}
+## acs1 - education attainment, state level
+temp_edu_attain3 <- acs1_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
+  mutate(C15002I_012E = C15002I_003E + C15002I_008E,
+         C15002I_013E = C15002I_004E + C15002I_009E,
+         C15002I_014E = C15002I_005E + C15002I_010E,
+         C15002I_015E = C15002I_006E + C15002I_011E) %>%
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'attainment',         
+    values_to = 'values') %>%
+  mutate(gender = case_when(attainment %in%
+                              c("C15002I_002E", "C15002I_003E", "C15002I_004E", "C15002I_005E", "C15002I_006E") ~ "male",
+                            attainment %in%
+                              c("C15002I_007E", "C15002I_008E", "C15002I_009E", "C15002I_010E", "C15002I_011E") ~ "female",
+                            TRUE ~ "total"
+  ),
+  education_level = case_when(attainment %in%
+                                c("C15002I_003E", "C15002I_008E", "C15002I_012E") ~ "less than a high school diploma",
+                              attainment %in%
+                                c("C15002I_004E", "C15002I_009E", "C15002I_013E") ~ "high school graduate",
+                              attainment %in%
+                                c("C15002I_005E", "C15002I_010E", "C15002I_014E") ~ "some college or associate’s degree",
+                              attainment %in%
+                                c("C15002I_006E", "C15002I_011E", "C15002I_015E") ~ "bachelor’s degree or higher",
+                              TRUE ~ "total")
+  ) %>% 
+  filter(education_level != "total", gender != "total") %>%
+  group_by(GEOID, NAME, YEAR, gender) %>% 
+  mutate(pct = values/sum(values))
+# graph, states: CA, TX, FL, NY
+temp_edu_attain3 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('Latinx Education Attainment Levels in States Most Populated By Latinx (2012-2020)') + 
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+In Figure 8, we can see the Latinx Education Attainment Levels for California, Florida, New York, and Texas between 2012-2020. In these graphs we can see that among the four states, there is a higher percentage of Latinx students obtaining bachelor’s degrees or higher in Florida, followed by New York, Texas and California and in all states more Latina women are obtaining these degrees. Among the four states, California has the most Latinx students obtaining less than high school diplomas, with a higher percentage of Latino males obtaining these diplomas.
+
+
+### ACS1 - Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+I used the ACS 1-year level data to determine the educational attainment levels of Latinx between 2012 and 2020 in the metropolitan areas with the highest Latinx populations, which include: Los Angeles-Long Beach, CA; New York-Northeastern, NJ; Miami-Hialeah, FL; Washington, DC/MD/VA; and Providence-Fall River~Pawtucket, MA/RI 
+```{r fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)"}
+## acs1 - education attainment, metro level 
+temp_edu_attain2 <- acs1_metro_data %>% 
+  select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
+  mutate(C15002I_012E = C15002I_003E + C15002I_008E,
+         C15002I_013E = C15002I_004E + C15002I_009E,
+         C15002I_014E = C15002I_005E + C15002I_010E,
+         C15002I_015E = C15002I_006E + C15002I_011E) %>%
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'attainment',         
+    values_to = 'values') %>%
+  mutate(gender = case_when(attainment %in%
+                              c("C15002I_002E", "C15002I_003E", "C15002I_004E", "C15002I_005E", "C15002I_006E") ~ "male",
+                            attainment %in%
+                              c("C15002I_007E", "C15002I_008E", "C15002I_009E", "C15002I_010E", "C15002I_011E") ~ "female",
+                            TRUE ~ "total"
+  ),
+  education_level = case_when(attainment %in%
+                                c("C15002I_003E", "C15002I_008E", "C15002I_012E") ~ "less than a high school diploma",
+                              attainment %in%
+                                c("C15002I_004E", "C15002I_009E", "C15002I_013E") ~ "high school graduate",
+                              attainment %in%
+                                c("C15002I_005E", "C15002I_010E", "C15002I_014E") ~ "some college or associate’s degree",
+                              attainment %in%
+                                c("C15002I_006E", "C15002I_011E", "C15002I_015E") ~ "bachelor’s degree or higher",
+                              TRUE ~ "total")
+  ) %>% 
+  filter(education_level != "total", gender != "total") %>%
+  group_by(GEOID, NAME, YEAR, gender) %>% 
+  mutate(pct = values/sum(values))
+
+# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area;
+# Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; 
+# Providence-Warwick, RI-MA Metro Area
+temp_edu_attain2 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
+  ggtitle('Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+In Figure 3, we can see the Latinx educational attainment levels for students in the  Los Angeles-Long Beach-Anaheim, California Metro Area between 2012-2020. In this line graph, we can see that there is an upward trend in the percentage of Latinx students obtaining bachelor’s degrees or higher degrees. When comparing Latina female and Latino male students, we can see that more Latina female students are earning bachelor’s degrees or higher than Latino male students. On the other hand, it seems that more Latino male students are earning high school diplomas in comparison to Latina female students.
+
+```{r}
+temp_edu_attain2 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
+  ggtitle('Latinx Education Attainment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+In Figure 4, we can see the Latinx Education Attainment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area between 2012-2020. We can see that there is a downward trend in the percentage of Latinx students who are obtaining less than a high school diploma. In terms of the attainment of bachelor’s degrees, there seems to be a drastic increase in these degrees after 2016 and from there it continues to increase. Also, Latina females obtained a higher percentage of bachelor degrees or higher in comparison to Latino males. 
+
+```{r}
+temp_edu_attain2 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
+  ggtitle('Latinx Education Attainment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+In Figure 5, we can see the Latinx Education Attainment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area between 2012-2020. In this graph, we can see that there is an upward trend in the amount of Latinx students who obtain bachelor’s degrees or higher and downward trend in the number of Latinx students who obtained less than a high school diploma. Again, it seems that Latina female students are earning more degrees than Latino male students.
+
+
+```{r}
+temp_edu_attain2 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
+  ggtitle('Latinx Education Attainment Levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+In Figure 6, we can see the Latinx education attainment levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area between 2012-2020. In this line graph, we can see that a higher percentage of Latinx students are obtaining less than a high school diploma, followed by bachelor’s degrees or higher, high school diploma, and some college or associate’s degree. 
+
+
+```{r}
+temp_edu_attain2 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
+  ggtitle('Latinx Education Attainment Levels in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+In Figure 7, we can see the Latinx Education Attainment Levels in Providence-Warwick, RI-MA Metro Area between 2012-2020. In this line graph we can see that among all of the education levels, there was a spike in the percentage of Latinx high school graduates between 2016 and 2018. Also, there were more Latino males who graduated high school and earned a high school diploma than Latina women. After 2018, there was a decrease in the percentage of Latinx students who earned a high school diploma.
+
+
+### ACS1 - Latinx Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-attain0, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Bexar County, Texas; Cook County, Illinois; Los Angeles County, California; Maricopa County, Arizona; Orange County, California; Riverside County, California; San Bernardino County, California; San Diego County, California (2012-2020)"}
+## ACS1 - Education Attainment Level, Counties 
+temp_edu_attain1 <- acs1_county_data %>% 
+  select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
+  mutate(C15002I_012E = C15002I_003E + C15002I_008E,
+         C15002I_013E = C15002I_004E + C15002I_009E,
+         C15002I_014E = C15002I_005E + C15002I_010E,
+         C15002I_015E = C15002I_006E + C15002I_011E) %>%
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'attainment',         
+    values_to = 'values') %>%
+  mutate(gender = case_when(attainment %in%
+                              c("C15002I_002E", "C15002I_003E", "C15002I_004E", "C15002I_005E", "C15002I_006E") ~ "latino male",
+                            attainment %in%
+                              c("C15002I_007E", "C15002I_008E", "C15002I_009E", "C15002I_010E", "C15002I_011E") ~ "latina female",
+                            TRUE ~ "total"
+  ),
+  education_level = case_when(attainment %in%
+                                c("C15002I_003E", "C15002I_008E", "C15002I_012E") ~ "less than a high school diploma",
+                              attainment %in%
+                                c("C15002I_004E", "C15002I_009E", "C15002I_013E") ~ "high school graduate",
+                              attainment %in%
+                                c("C15002I_005E", "C15002I_010E", "C15002I_014E") ~ "some college or associate’s degree",
+                              attainment %in%
+                                c("C15002I_006E", "C15002I_011E", "C15002I_015E") ~ "bachelor’s degree or higher",
+                              TRUE ~ "total")
+  ) %>% 
+  filter(education_level != "total", gender != "total") %>%
+  group_by(GEOID, NAME, YEAR, gender) %>% 
+  mutate(pct = values/sum(values))
+
+# graph, counties: Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, San Diego County, CA
+temp_edu_attain1 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+                                        "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
+  ggtitle('Latinx Education Attainment Levels in Counties Most Populated By Latinx (2012-2020)') + 
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+In Figure \@ref(fig:temp-edu-attain0), I created line graphs for the educational attainment levels of Latinx in the counties that are most populated by Latinx communities. As seen in Figure \@ref(fig:temp-edu-attain0), we can see that there is an overall trend in all the counties, in which the percent of bachelor’s degrees attained were low for Latina female and Latino male students in comparison to the attainment of a high school diploma, less than a high school diploma, and some college or associate's degree. 
+
+### ACS1 - Latinx Education Attainment Levels in Los Angeles County (2012-2020)
+```{r temp-edu-attain1, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Los Angeles County, California (2012-2020)"}
 ## ACS1 - Education Attainment Level, County Level
 temp_edu_attain1 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
@@ -80,15 +265,277 @@ temp_edu_attain1 %>% filter(NAME == "Los Angeles County, California") %>%
 In Figure \@ref(fig:temp-edu-attain1), we can see more closely the Latinx education attainment levels in the
 Los Angeles County, California. In this line graph, we can see that the educational attainment levels of Latinx remain low for the attainment of a bachelor’s degree or higher, followed by some college or associate’s degree, high school diploma, and less than a high school diploma. From this line graph, we can see that Latinx students in Los Angeles County, California between 2012-2020 have not earned many bachelor’s degrees or higher degrees and have earned less than a high school diploma. Still, it seems that between 2012-2020, there has been an upward trend in the number of Latinx students attaining bachelor’s degrees or higher degrees and the number of Latinx students attaining less than a high school diploma has been steadily decreasing. 
 
+### ACS5 - Latinx Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
 
-### ACS1 - Education Attainment Level in the following counties: Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, San Diego County, CA
-```{r fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels for Bexar County, Texas; Cook County, Illinois; Los Angeles County, California; Maricopa County, Arizona; Orange County, California; Riverside County, California; San Bernardino County, California; San Diego County, California (2012-2020)"}
-# graph, counties: Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, San Diego County, CA
-temp_edu_attain1 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
-                                        "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
-  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Latinx Education Attainment Levels in Counties Most Populated By Latinx (2012-2020)') + 
-  xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure 9, we can see the Latinx Education Attainment Levels for California, Florida, New York, and Texas between 2012-2020 using the ACS 5-year level data. Again, the line graphs seem to reflect the same trends as the previous line graph in Figure 8.
+
+### ACS5 - Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Latinx Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+
+### ACS5 - Latinx Education Attainment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### LATINX EDUCATION ENROLLNMENT OUTCOMES (2012-2020)
+
+### ACS1 - Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Latinx Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+
+### ACS1 - Latinx Education Enrollment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### ACS5 - Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Latinx Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Latinx Education Enrollment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+### TOTAL EDUCATION ATTAINMENT RATES OF STUDENTS WHO ATTAINED LESS THAN A HIGH SCHOOL DIPLOMA, HIGH SCHOOL DIPLOMA, SOME COLLEGE OR ASSOCIATE'S DEGREE, AND BACHELOR'S DEGREE OR HIGHER BY RACE/ETHNICITY (2012-2020)
+
+### ACS1 - Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+
+### ACS1 - Education Attainment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### ACS5 - Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Education Attainment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### TOTAL EDUCATIONAL ENROLLMENT RATES OF STUDENTS ENROLLED IN  SCHOOL  BY RACE/ETHNICITY (2012-2020) 
+### **enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school
+
+### ACS1 - Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Latinx Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+
+### ACS1 - Latinx Education Enrollment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### ACS5 - Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Latinx Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Latinx Education Enrollment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### TOTAL EDUCATION ATTAINMENT RATES OF STUDENTS WHO ATTAINED LESS THAN A HIGH SCHOOL DIPLOMA, HIGH SCHOOL DIPLOMA, SOME COLLEGE OR ASSOCIATE'S DEGREE, AND BACHELOR'S DEGREE OR HIGHER BY RACE/ETHNICITY (2012-2020)
+
+### ACS1 - Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+
+### ACS1 - Education Attainment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### ACS5 - Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+### ACS5 - Education Attainment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### ENROLLMENT RATES IN NURSERY SCHOOL BY RACE (2012-2020)
+
+### ACS1 - Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+
+### ACS1 - Education Attainment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### ENROLLMENT RATES IN COLLEGE/UNIVERSITIES BY RACE (2012-2020)
+
+### ACS1 - Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+
+### ACS1 - Education Attainment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
+
+### ENROLLMENT RATES IN GRADUATE OR PROFESSIONAL SCHOOL BY RACE (2012-2020)
+
+### ACS1 - Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r}
+
+```
+
+### ACS1 - Education Attainment Levels in Los Angeles County (2012-2020)
+```{r}
+
+```
+
 
