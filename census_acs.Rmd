@@ -49,7 +49,7 @@ theme_set(
 [BACKGROUND HERE; NEED ASSISTANCE INCLUDING CITATIONS HERE]
 
 
-### LATINX EDUCATION ATTAINMENT OUTCOMES (2012-2020)
+### LATINX EDUCATION ATTAINMENT BY GENDER (2012-2020)
 
 ### ACS1 - Latinx Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
 I used the ACS 1-year and ACS 5-year level data to determine the educational attainment levels of Latinx students between 2012 and 2020 in the following states: California, Texas, Florida, and New York. All of these states have seen an increase in the Latinx population since 2010. Therefore, I want to generate line graphs of the educational attainment levels of Latinxs in each state individually and then compare them against each other to analyze any patterns in the educational levels of each state. 
