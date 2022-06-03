@@ -1,7 +1,7 @@
 ---
 title: "Latinx Education Attainment and Enrollment Levels (2012-2020) Using the American Community Survey (ACS) Census Data"
 author: "Paula Nazario, MPP Student at the UCLA Luskin School of Public Affairs"
-date: "June 1, 2022"
+date: "June 2, 2022"
 output: 
   bookdown::html_document2:
     number_sections: false
@@ -54,7 +54,7 @@ theme_set(
 ### ACS1 - Latinx Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
 I used the ACS 1-year and ACS 5-year level data to determine the educational attainment levels of Latinx students between 2012 and 2020 in the following states: California, Texas, Florida, and New York. All of these states have seen an increase in the Latinx population since 2010. Therefore, I want to generate line graphs of the educational attainment levels of Latinxs in each state individually and then compare them against each other to analyze any patterns in the educational levels of each state. 
 
-```{r fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)"}
+```{r temp-edu-attain1, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs1 - education attainment, state level
 temp_edu_attain3 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
@@ -88,16 +88,15 @@ temp_edu_attain3 <- acs1_state_data %>%
 # graph, states: CA, TX, FL, NY
 temp_edu_attain3 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Latinx Education Attainment Levels in States Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-In Figure 8, we can see the Latinx Education Attainment Levels for California, Florida, New York, and Texas between 2012-2020. In these graphs we can see that among the four states, there is a higher percentage of Latinx students obtaining bachelor’s degrees or higher in Florida, followed by New York, Texas and California and in all states more Latina women are obtaining these degrees. Among the four states, California has the most Latinx students obtaining less than high school diplomas, with a higher percentage of Latino males obtaining these diplomas.
+In Figure \@ref(fig:temp-edu-attain1), we can see the Latinx Education Attainment Levels for California, Florida, New York, and Texas between 2012-2020. In these graphs we can see that among the four states, there is a higher percentage of Latinx students obtaining bachelor’s degrees or higher in Florida, followed by New York, Texas and California and in all states more Latina women are obtaining these degrees. Among the four states, California has the most Latinx students obtaining less than high school diplomas, with a higher percentage of Latino males obtaining these diplomas.
 
 
 ### ACS1 - Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
 I used the ACS 1-year level data to determine the educational attainment levels of Latinx between 2012 and 2020 in the metropolitan areas with the highest Latinx populations, which include: Los Angeles-Long Beach, CA; New York-Northeastern, NJ; Miami-Hialeah, FL; Washington, DC/MD/VA; and Providence-Fall River~Pawtucket, MA/RI 
-```{r fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)"}
+```{r temp-edu-attain2, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
 ## acs1 - education attainment, metro level 
 temp_edu_attain2 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
@@ -134,53 +133,48 @@ temp_edu_attain2 <- acs1_metro_data %>%
 # Providence-Warwick, RI-MA Metro Area
 temp_edu_attain2 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-In Figure 3, we can see the Latinx educational attainment levels for students in the  Los Angeles-Long Beach-Anaheim, California Metro Area between 2012-2020. In this line graph, we can see that there is an upward trend in the percentage of Latinx students obtaining bachelor’s degrees or higher degrees. When comparing Latina female and Latino male students, we can see that more Latina female students are earning bachelor’s degrees or higher than Latino male students. On the other hand, it seems that more Latino male students are earning high school diplomas in comparison to Latina female students.
+In Figure \@ref(fig:temp-edu-attain2), we can see the Latinx educational attainment levels for students in the  Los Angeles-Long Beach-Anaheim, California Metro Area between 2012-2020. In this line graph, we can see that there is an upward trend in the percentage of Latinx students obtaining bachelor’s degrees or higher degrees. When comparing Latina female and Latino male students, we can see that more Latina female students are earning bachelor’s degrees or higher than Latino male students. On the other hand, it seems that more Latino male students are earning high school diplomas in comparison to Latina female students.
 
-```{r}
+```{r temp-edu-attain3, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_attain2 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-In Figure 4, we can see the Latinx Education Attainment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area between 2012-2020. We can see that there is a downward trend in the percentage of Latinx students who are obtaining less than a high school diploma. In terms of the attainment of bachelor’s degrees, there seems to be a drastic increase in these degrees after 2016 and from there it continues to increase. Also, Latina females obtained a higher percentage of bachelor degrees or higher in comparison to Latino males. 
+In Figure \@ref(fig:temp-edu-attain3), we can see the Latinx Education Attainment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area between 2012-2020. We can see that there is a downward trend in the percentage of Latinx students who are obtaining less than a high school diploma. In terms of the attainment of bachelor’s degrees, there seems to be a drastic increase in these degrees after 2016 and from there it continues to increase. Also, Latina females obtained a higher percentage of bachelor degrees or higher in comparison to Latino males. 
 
-```{r}
+```{r temp-edu-attain4, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_attain2 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-In Figure 5, we can see the Latinx Education Attainment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area between 2012-2020. In this graph, we can see that there is an upward trend in the amount of Latinx students who obtain bachelor’s degrees or higher and downward trend in the number of Latinx students who obtained less than a high school diploma. Again, it seems that Latina female students are earning more degrees than Latino male students.
+In Figure \@ref(fig:temp-edu-attain4), we can see the Latinx Education Attainment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area between 2012-2020. In this graph, we can see that there is an upward trend in the amount of Latinx students who obtain bachelor’s degrees or higher and downward trend in the number of Latinx students who obtained less than a high school diploma. Again, it seems that Latina female students are earning more degrees than Latino male students.
 
 
-```{r}
+```{r temp-edu-attain5, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_attain2 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-In Figure 6, we can see the Latinx education attainment levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area between 2012-2020. In this line graph, we can see that a higher percentage of Latinx students are obtaining less than a high school diploma, followed by bachelor’s degrees or higher, high school diploma, and some college or associate’s degree. 
+In Figure \@ref(fig:temp-edu-attain5), we can see the Latinx education attainment levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area between 2012-2020. In this line graph, we can see that a higher percentage of Latinx students are obtaining less than a high school diploma, followed by bachelor’s degrees or higher, high school diploma, and some college or associate’s degree. 
 
 
-```{r}
+```{r temp-edu-attain6, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_attain2 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-In Figure 7, we can see the Latinx Education Attainment Levels in Providence-Warwick, RI-MA Metro Area between 2012-2020. In this line graph we can see that among all of the education levels, there was a spike in the percentage of Latinx high school graduates between 2016 and 2018. Also, there were more Latino males who graduated high school and earned a high school diploma than Latina women. After 2018, there was a decrease in the percentage of Latinx students who earned a high school diploma.
+In Figure \@ref(fig:temp-edu-attain6), we can see the Latinx Education Attainment Levels in Providence-Warwick, RI-MA Metro Area between 2012-2020. In this line graph we can see that among all of the education levels, there was a spike in the percentage of Latinx high school graduates between 2016 and 2018. Also, there were more Latino males who graduated high school and earned a high school diploma than Latina women. After 2018, there was a decrease in the percentage of Latinx students who earned a high school diploma.
 
 
 ### ACS1 - Latinx Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r temp-edu-attain0, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Bexar County, Texas; Cook County, Illinois; Los Angeles County, California; Maricopa County, Arizona; Orange County, California; Riverside County, California; San Bernardino County, California; San Diego County, California (2012-2020)"}
+```{r temp-edu-attain7, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Bexar County, Texas; Cook County, Illinois; Los Angeles County, California; Maricopa County, Arizona; Orange County, California; Riverside County, California; San Bernardino County, California; San Diego County, California (2012-2020)"}
 ## ACS1 - Education Attainment Level, Counties 
 temp_edu_attain1 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
@@ -216,14 +210,13 @@ temp_edu_attain1 <- acs1_county_data %>%
 temp_edu_attain1 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
                                         "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Latinx Education Attainment Levels in Counties Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-In Figure \@ref(fig:temp-edu-attain0), I created line graphs for the educational attainment levels of Latinx in the counties that are most populated by Latinx communities. As seen in Figure \@ref(fig:temp-edu-attain0), we can see that there is an overall trend in all the counties, in which the percent of bachelor’s degrees attained were low for Latina female and Latino male students in comparison to the attainment of a high school diploma, less than a high school diploma, and some college or associate's degree. 
+In Figure \@ref(fig:temp-edu-attain7), I created line graphs for the educational attainment levels of Latinx in the counties that are most populated by Latinx communities. As seen in Figure \@ref(fig:temp-edu-attain7), we can see that there is an overall trend in all the counties, in which the percent of bachelor’s degrees attained were low for Latina female and Latino male students in comparison to the attainment of a high school diploma, less than a high school diploma, and some college or associate's degree. 
 
 ### ACS1 - Latinx Education Attainment Levels in Los Angeles County (2012-2020)
-```{r temp-edu-attain1, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Los Angeles County, California (2012-2020)"}
+```{r temp-edu-attain8, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Levels in Los Angeles County, California (2012-2020)"}
 ## ACS1 - Education Attainment Level, County Level
 temp_edu_attain1 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
@@ -258,15 +251,13 @@ temp_edu_attain1 <- acs1_county_data %>%
 # Graph, Los Angeles County
 temp_edu_attain1 %>% filter(NAME == "Los Angeles County, California") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + 
-  ggtitle('Latinx Education Attainment Levels in Los Angeles County, California (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-In Figure \@ref(fig:temp-edu-attain1), we can see more closely the Latinx education attainment levels in the
-Los Angeles County, California. In this line graph, we can see that the educational attainment levels of Latinx remain low for the attainment of a bachelor’s degree or higher, followed by some college or associate’s degree, high school diploma, and less than a high school diploma. From this line graph, we can see that Latinx students in Los Angeles County, California between 2012-2020 have not earned many bachelor’s degrees or higher degrees and have earned less than a high school diploma. Still, it seems that between 2012-2020, there has been an upward trend in the number of Latinx students attaining bachelor’s degrees or higher degrees and the number of Latinx students attaining less than a high school diploma has been steadily decreasing. 
+In Figure \@ref(fig:temp-edu-attain8), we can see more closely the Latinx education attainment levels in the Los Angeles County, California. In this line graph, we can see that the educational attainment levels of Latinx remain low for the attainment of a bachelor’s degree or higher, followed by some college or associate’s degree, high school diploma, and less than a high school diploma. From this line graph, we can see that Latinx students in Los Angeles County, California between 2012-2020 have not earned many bachelor’s degrees or higher degrees and have earned less than a high school diploma. Still, it seems that between 2012-2020, there has been an upward trend in the number of Latinx students attaining bachelor’s degrees or higher degrees and the number of Latinx students attaining less than a high school diploma has been steadily decreasing. 
 
 ### ACS5 - Latinx Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
-```{r}
+```{r temp-edu-attain9, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Levels in California, Texas, Florida and New York States (2012-2020)"}
 ## acs5 - education attainment, state level
 temp_edu_attain6 <- acs5_state_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
@@ -300,14 +291,13 @@ temp_edu_attain6 <- acs5_state_data %>%
 # graph, states: CA, TX, FL, NY
 temp_edu_attain6 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Latinx Education Attainment Levels in States Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-In Figure 9, we can see the Latinx Education Attainment Levels for California, Florida, New York, and Texas between 2012-2020 using the ACS 5-year level data. Again, the line graphs seem to reflect the same trends as the previous line graph in Figure 8.
+In Figure \@ref(fig:temp-edu-attain9), we can see the Latinx Education Attainment Levels for California, Florida, New York, and Texas between 2012-2020 using the ACS 5-year level data. Again, the line graphs seem to reflect the same trends as the previous line graph in Figure \@ref(fig:temp-edu-attain8).
 
 ### ACS5 - Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
-```{r}
+```{r temp-edu-attain10, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
 ## acs5 - education attainment, metro level
 temp_edu_attain5 <- acs5_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
@@ -344,49 +334,45 @@ temp_edu_attain5 <- acs5_metro_data %>%
 # Providence-Warwick, RI-MA Metro Area
 temp_edu_attain5 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain10),
 
-```{r}
+```{r temp-edu-attain11, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_attain5 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain11),
 
-
-```{r}
+```{r temp-edu-attain12, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_attain5 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain12),
 
-
-```{r}
+```{r temp-edu-attain13, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_attain5 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain13),
 
-
-```{r}
+```{r temp-edu-attain14, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Levels in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_attain5 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
-  ggtitle('Latinx Education Attainment Levels in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain14),
 
-
-### ACS5 - Latinx Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r}
+### ACS5 - Latinx Education Attainment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-attain15, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs5 - education attainment, county level
 temp_edu_attain4 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
@@ -421,14 +407,14 @@ temp_edu_attain4 <- acs5_county_data %>%
 temp_edu_attain4 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
                                         "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Latinx Education Attainment Levels in Counties Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain15),
 
 
-### ACS5 - Latinx Education Attainment Levels in Los Angeles County (2012-2020)
-```{r}
+### ACS5 - Latinx Education Attainment Levels in Los Angeles County, CA (2012-2020)
+```{r temp-edu-attain16, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Levels in Los Angeles County, California (2012-2020)"}
 ## acs5 - education attainment, county level
 temp_edu_attain4 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
@@ -463,18 +449,16 @@ temp_edu_attain4 <- acs5_county_data %>%
 # graph, los angeles county
 temp_edu_attain4 %>% filter(NAME == "Los Angeles County, California") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + 
-  ggtitle('Latinx Education Attainment Levels in Los Angeles County, California (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
-ggsave(path = "graphs","acs5_eduattain_lacounty.pdf", width = 10,   height = 6)
-ggsave(path = "graphs","acs5_eduattain_lacounty.png", width = 10,   height = 6)
 ```
+In Figure \@ref(fig:temp-edu-attain16),
 
 
-### LATINX EDUCATION ENROLLNMENT OUTCOMES (2012-2020)
+### LATINX ENROLLNMENT IN NURSERY SCHOOL, K-12, COLLEGE/UNIVERSITIES, AND GRADUATE OR PROFESSIONAL SCHOOL (2012-2020)
 
 ### ACS1 - Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)
-```{r}
+```{r temp-edu-attain17, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs1 - education enrollment, state level
 temp_edu_enr9 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -500,13 +484,13 @@ temp_edu_enr9 <- acs1_state_data %>%
 # graph, states: CA, TX, FL, NY
 temp_edu_enr9 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Latinx Education Enrollment Levels in States Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr17),
 
 ### ACS1 - Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
-```{r}
+```{r temp-edu-enr18, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
 ## acs1 - education enrollment, metro level 
 temp_edu_enr8 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -530,55 +514,48 @@ temp_edu_enr8 <- acs1_metro_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 
-# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area;
-# Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; 
-# Providence-Warwick, RI-MA Metro Area
+# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area
 temp_edu_enr8 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollnment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr18),
 
-
-```{r}
+```{r temp-edu-enr19, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_enr8 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr19),
 
-
-```{r}
+```{r temp-edu-enr20, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_enr8 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr20),
 
-
-```{r}
+```{r temp-edu-enr21, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_enr8 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollment Levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr21),
 
-
-```{r}
+```{r temp-edu-enr22, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Levels in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_enr8 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollment Levels in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr22),
 
-
-### ACS1 - Latinx Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r}
+### ACS1 - Latinx Education Enrollment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-enr23, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level 
 temp_edu_enr7 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -606,14 +583,13 @@ temp_edu_enr7 <- acs1_county_data %>%
 temp_edu_enr7 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
                                         "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Latinx Education Enrollment Levels in Counties Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr23),
 
-
-### ACS1 - Latinx Education Enrollment Levels in Los Angeles County (2012-2020)
-```{r}
+### ACS1 - Latinx Education Enrollment Levels in Los Angeles County, CA (2012-2020)
+```{r temp-edu-enr24, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Levels in Los Angeles County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level 
 temp_edu_enr7 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -640,14 +616,13 @@ temp_edu_enr7 <- acs1_county_data %>%
 ## graph, los angeles county, california
 temp_edu_enr7 %>% filter(NAME == "Los Angeles County, California") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + 
-  ggtitle('Latinx Education Enrollment Levels in Los Angeles County, California (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr24),
 
 ### ACS5 - Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)
-```{r}
+```{r temp-edu-enr25, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs5 - education enrollment, state level
 temp_edu_enr12 <- acs5_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -673,13 +648,13 @@ temp_edu_enr12 <- acs5_state_data %>%
 # graph, states: CA, TX, FL, NY
 temp_edu_enr12 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Latinx Education Enrollment Levels in States Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr25),
 
 ### ACS5 - Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
-```{r}
+```{r temp-edu-enr26, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
 ## acs5 - education enrollment, metro level 
 temp_edu_enr11 <- acs5_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -707,46 +682,45 @@ temp_edu_enr11 <- acs5_metro_data %>%
 # Providence-Warwick, RI-MA Metro Area
 temp_edu_enr11 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollnment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr26),
 
-```{r}
+```{r temp-edu-enr27, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollment Levels in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr27),
 
-```{r}
+```{r temp-edu-enr28, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollment Levels in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr28),
 
-```{r}
+```{r temp-edu-enr29, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollment Levels in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr29),
 
-```{r}
+```{r temp-edu-enr30, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Levels in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
-  ggtitle('Latinx Education Enrollment Levels in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr30),
 
-
-### ACS5 - Latinx Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r}
+### ACS5 - Latinx Education Enrollment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-enr31, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs5 - education enrollment, county level 
 temp_edu_enr10 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -772,13 +746,13 @@ temp_edu_enr10 <- acs5_county_data %>%
 ## counties
 temp_edu_enr10 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas", "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Latinx Education Enrollment Levels in Counties Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr31),
 
 ### ACS5 - Latinx Education Enrollment Levels in Los Angeles County (2012-2020)
-```{r}
+```{r temp-edu-enr32, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Levels in Los Angeles County, CA (2012-2020)"}
 ## acs5 - education enrollment, county level 
 temp_edu_enr10 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -805,18 +779,17 @@ temp_edu_enr10 <- acs5_county_data %>%
 ## graph, los angeles county, california
 temp_edu_enr10 %>% filter(NAME == "Los Angeles County, California") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + 
-  ggtitle('Latinx Education Enrollment Levels in Los Angeles County, California (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr32),
 
 
 ### TOTAL EDUCATION ATTAINMENT RATES OF STUDENTS WHO ATTAINED LESS THAN A HIGH SCHOOL DIPLOMA, HIGH SCHOOL DIPLOMA, SOME COLLEGE OR ASSOCIATE'S DEGREE, AND BACHELOR'S DEGREE OR HIGHER BY RACE/ETHNICITY (2012-2020)
 
 ### ACS1 - Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
-```{r}
-## acs1 - education attainment, state level (total educational attainment rates (aggregated from: total less than a high school diploma, 
-## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
+```{r temp-edu-attain33, fig.cap= "ACS 1-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in California, Texas, Florida, and New York States (2012-2020)"}
+## acs1 - education attainment, state level (total educational attainment rates (aggregated from: total less than a high school diploma, total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race15 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
   pivot_longer(
@@ -841,15 +814,14 @@ temp_edu_attain_race15 <- acs1_state_data %>%
 # graph, states: CA, TX, FL, NY
 temp_edu_attain_race15 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Attainment Levels By Race in States Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain33),
 
 ### ACS1 - Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
-```{r}
-## acs1 - education attainment, metro level (total educational attainment rates (aggregated from: total less than a high school diploma, 
-## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
+```{r temp-edu-attain34, fig.cap= "ACS 1-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
+## acs1 - education attainment, metro level (total educational attainment rates (aggregated from: total less than a high school diploma, total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race14 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
   pivot_longer(
@@ -874,49 +846,46 @@ temp_edu_attain_race14 <- acs1_metro_data %>%
 # graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; Providence-Warwick, RI-MA Metro Area
 temp_edu_attain_race14 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain34),
 
-```{r}
+
+```{r temp-edu-attain35, fig.cap= "ACS 1-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_attain_race14 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain35),
 
-
-```{r}
+```{r temp-edu-attain36, fig.cap= "ACS 1-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_attain_race14 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain36),
 
-
-```{r}
+```{r temp-edu-attain37, fig.cap= "ACS 1-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_attain_race14 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain37),
 
-
-```{r}
+```{r temp-edu-attain38, fig.cap= "ACS 1-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_attain_race14 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain38),
 
-
-### ACS1 - Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r}
+### ACS1 - Education Attainment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-attain39, fig.cap= "ACS 1-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs1 - education attainment, county level (total educational attainment rates (aggregated from: total less than a high school diploma, 
 ## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race13 <- acs1_county_data %>% 
@@ -943,14 +912,13 @@ temp_edu_attain_race13 <- acs1_county_data %>%
 ## graphs, counties
 temp_edu_attain_race13 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas","Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Attainment Levels in Counties By Race (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-attain39),
 
 ### ACS1 - Education Attainment Levels in Los Angeles County (2012-2020)
-```{r}
+```{r temp-edu-attain40, fig.cap= "ACS 1-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Los Angeles County, CA (2012-2020)"}
 ## acs1 - education attainment, county level (total educational attainment rates (aggregated from: total less than a high school diploma, 
 ## total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race13 <- acs1_county_data %>% 
@@ -977,14 +945,13 @@ temp_edu_attain_race13 <- acs1_county_data %>%
 ## graphs, counties
 temp_edu_attain_race13 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Attainment Levels in Los Angeles County, California By Race (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-attain40),
 
 ### ACS5 - Education Attainment Levels in California, Texas, Florida, and New York States (2012-2020)
-```{r}
+```{r temp-edu-attain41, fig.cap= "ACS 5-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs5 - education attainment, state level, (total educational attainment rates (aggregated from: total less than a high school diploma, total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race18 <- acs5_state_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% ## this number can change to any enrollment level preferred
@@ -1010,13 +977,13 @@ temp_edu_attain_race18 <- acs5_state_data %>%
 # graph, states: CA, TX, FL, NY
 temp_edu_attain_race18 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Attainment Levels By Race in States Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain41),
 
 ### ACS5 - Education Attainment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
-```{r}
+```{r temp-edu-attain42, fig.cap= "ACS 5-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Los Angeles-Long Beach-Anaheim, CA Metro Area"}
 ## acs5 - education attainment, metro level (total educational attainment rates (aggregated from: total less than a high school diploma, total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race17 <- acs5_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
@@ -1044,50 +1011,45 @@ temp_edu_attain_race17 <- acs5_metro_data %>%
 # Providence-Warwick, RI-MA Metro Area
 temp_edu_attain_race17 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain42),
 
-
-```{r}
+```{r temp-edu-attain43, fig.cap= "ACS 5-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_attain_race17 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain43),
 
-
-```{r}
+```{r temp-edu-attain44, fig.cap= "ACS 5-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_attain_race17 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain44),
 
-
-```{r}
+```{r temp-edu-attain45, fig.cap= "ACS 5-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_attain_race17 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain45),
 
-
-```{r}
+```{r temp-edu-attain46, fig.cap= "ACS 5-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_attain_race17 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Attainment Levels By Race in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent of Latinx') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain46),
 
-
-### ACS5 - Education Attainment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r}
+### ACS5 - Education Attainment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-attain47, fig.cap= "ACS 5-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs5 - education attainment, county level (total educational attainment rates (aggregated from: total less than a high school diploma, total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race16 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
@@ -1114,13 +1076,13 @@ temp_edu_attain_race16 <- acs5_county_data %>%
 temp_edu_attain_race16 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
                                               "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Attainment Levels in Counties By Race (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-attain47),
 
-### ACS5 - Education Attainment Levels in Los Angeles County (2012-2020)
-```{r}
+### ACS5 - Education Attainment Levels in Los Angeles County, CA (2012-2020)
+```{r temp-edu-attain48, fig.cap= "ACS 5-Year Level Data: Total Education Attainment Levels By Race/Ethnicity in Los Angeles County, CA (2012-2020)"}
 ## acs5 - education attainment, county level (total educational attainment rates (aggregated from: total less than a high school diploma, total high school graduate, total some college or associate’s degree, total bachelor’s degree or higher))
 temp_edu_attain_race16 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002\\w_001E")) %>% 
@@ -1150,12 +1112,12 @@ temp_edu_attain_race16 %>% filter(NAME %in% c("Los Angeles County, California"))
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-attain48),
 
 ### TOTAL EDUCATIONAL ENROLLMENT RATES OF STUDENTS ENROLLED IN  SCHOOL BY RACE/ETHNICITY (2012-2020) **enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school***
 
 ### ACS1 - Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)
-```{r}
+```{r temp-edu-enr49, fig.cap= "ACS 1-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Los Angeles County, CA (2012-2020)"}
 ## acs1 - education enrollment, state level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race21 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
@@ -1181,13 +1143,13 @@ temp_edu_enr_race21 <- acs1_state_data %>%
 # graph, states: CA, TX, FL, NY
 temp_edu_enr_race21 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Enrollment Levels By Race in States Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr49),
 
 ### ACS1 - Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
-```{r}
+```{r temp-edu-enr50, fig.cap= "ACS 1-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
 ## acs1 - education enrollment, metro level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race20 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
@@ -1215,49 +1177,46 @@ temp_edu_enr_race20 <- acs1_metro_data %>%
 # Providence-Warwick, RI-MA Metro Area
 temp_edu_enr_race20 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr50),
 
-```{r}
+
+```{r temp-edu-enr51, fig.cap= "ACS 1-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_enr_race20 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr51),
 
-
-```{r}
+```{r temp-edu-enr52, fig.cap= "ACS 1-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_enr_race20 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr52),
 
-
-```{r}
+```{r temp-edu-enr53, fig.cap= "ACS 1-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_enr_race20 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr53),
 
-
-```{r}
+```{r temp-edu-enr54, fig.cap= "ACS 1-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_enr_race20 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr54),
 
-
-### ACS1 - Latinx Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r}
+### ACS1 - Latinx Education Enrollment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-enr55, fig.cap= "ACS 1-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race19 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% ## this number can change to any enrollment level preferred
@@ -1280,19 +1239,17 @@ temp_edu_enr_race19 <- acs1_county_data %>%
     )) %>% 
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
-## graphs, counties
 ## counties
 temp_edu_enr_race19 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
                                         "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Enrollment Levels in Counties By Race (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr55),
 
 ### ACS1 - Latinx Education Enrollment Levels in Los Angeles County (2012-2020)
-```{r}
+```{r temp-edu-enr56, fig.cap= "ACS 1-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Los Angeles County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race19 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% ## this number can change to any enrollment level preferred
@@ -1318,14 +1275,13 @@ temp_edu_enr_race19 <- acs1_county_data %>%
 ## la county
 temp_edu_enr_race19 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Enrollment Levels in Counties By Race (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr56),
 
 ### ACS5 - Latinx Education Enrollment Levels in California, Texas, Florida, and New York States (2012-2020)
-```{r}
+```{r temp-edu-enr57, fig.cap= "ACS 5-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs5 - education enrollment, state level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race24 <- acs5_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
@@ -1351,15 +1307,14 @@ temp_edu_enr_race24 <- acs5_state_data %>%
 # graph, states: CA, TX, FL, NY
 temp_edu_enr_race24 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Enrollment Levels By Race in States Most Populated By Latinx (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr57),
 
 ### ACS5 - Latinx Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
-```{r}
-## acs5 - education enrollment, metro level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school,
-## k-12, college/universities, and graduate or professional school))
+```{r temp-edu-enr58, fig.cap= "ACS 5-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Los Angeles-Long Beach-Anaheim, CA Metro Area"}
+## acs5 - education enrollment, metro level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race23 <- acs5_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
   pivot_longer(
@@ -1381,58 +1336,49 @@ temp_edu_enr_race23 <- acs5_metro_data %>%
     )) %>% 
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
-# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area;
-# Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; 
-# Providence-Warwick, RI-MA Metro Area
+# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area
 temp_edu_enr_race23 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
-
 ```
+In Figure \@ref(fig:temp-edu-enr58),
 
-
-```{r}
+```{r temp-edu-enr59, fig.cap= "ACS 5-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_enr_race23 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr59),
 
-
-```{r}
+```{r temp-edu-enr60, fig.cap= "ACS 5-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_enr_race23 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr60),
 
-
-```{r}
+```{r emp-edu-enr61, fig.cap= "ACS 5-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_enr_race23 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr61),
 
-
-```{r}
+```{r emp-edu-enr62, fig.cap= "ACS 5-Year Level Data: Total Education Enrollment Rates of Students Enrolled in School By Race/Ethnicity in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_enr_race23 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
-  ggtitle('Education Enrollment Levels By Race in Providence-Warwick, RI-MA Metro Area (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr62),
 
-
-### ACS5 - Latinx Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r}
-## acs5 - education enrollment, county level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school,
-## k-12, college/universities, and graduate or professional school))
+### ACS5 - Latinx Education Enrollment Levels in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r emp-edu-enr63, fig.cap= "ACS 5-Year Level Data: Total Education Enrollment Rates of Students Enrolled in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
+## acs5 - education enrollment, county level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race22 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
   pivot_longer(
@@ -1457,15 +1403,14 @@ temp_edu_enr_race22 <- acs5_county_data %>%
 ## counties
 temp_edu_enr_race22 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas", "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Enrollment Levels in Counties By Race (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr63),
 
-### ACS5 - Latinx Education Enrollment Levels in Los Angeles County (2012-2020)
-```{r}
-## acs5 - education enrollment, county level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school,
-## k-12, college/universities, and graduate or professional school))
+### ACS5 - Latinx Education Enrollment Levels in Los Angeles County, CA (2012-2020)
+```{r emp-edu-enr64, fig.cap= "ACS 5-Year Level Data: Total Education Enrollment Rates of Students Enrolled in Los Angeles County, CA (2012-2020)"}
+## acs5 - education enrollment, county level (educational enrollment rates of students enrolled in school (enrolled in school means enrolled in nursery school, k-12, college/universities, and graduate or professional school))
 temp_edu_enr_race22 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_002E")) %>% 
   pivot_longer(
@@ -1487,15 +1432,13 @@ temp_edu_enr_race22 <- acs5_county_data %>%
     )) %>% 
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
-## graphs, counties
-## counties
+## la county
 temp_edu_enr_race22 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
-  ggtitle('Education Enrollment Levels in Counties By Race (2012-2020)') + 
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr64),
 
 ### ENROLLMENT RATES IN NURSERY SCHOOL BY RACE (2012-2020)
 
@@ -1530,6 +1473,7 @@ temp_edu_enr_race26 %>% filter(NAME %in% c("California", "Texas", "Florida", "Ne
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr65),
 
 ### ACS1 - Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
 ```{r}
@@ -1564,6 +1508,7 @@ temp_edu_enr_race27 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr66),
 
 ```{r}
 temp_edu_enr_race27 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
@@ -1572,7 +1517,7 @@ temp_edu_enr_race27 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Me
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr67),
 
 ```{r}
 temp_edu_enr_race27 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
@@ -1581,7 +1526,7 @@ temp_edu_enr_race27 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, F
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr68),
 
 ```{r}
 temp_edu_enr_race27 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
@@ -1590,7 +1535,7 @@ temp_edu_enr_race27 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-M
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr69),
 
 ```{r}
 temp_edu_enr_race27 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
@@ -1599,7 +1544,7 @@ temp_edu_enr_race27 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr70),
 
 ### ACS1 - Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
 ```{r}
@@ -1633,7 +1578,7 @@ temp_edu_enr_race25 %>% filter(NAME %in% c("Los Angeles County, California", "Co
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr71),
 
 ### ACS1 - Education Enrollment Levels in Los Angeles County (2012-2020)
 ```{r}
@@ -1667,7 +1612,7 @@ temp_edu_enr_race25 %>% filter(NAME %in% c("Los Angeles County, California")) %>
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr72),
 
 ### ENROLLMENT RATES IN COLLEGE/UNIVERSITIES BY RACE (2012-2020)
 
@@ -1702,6 +1647,7 @@ temp_edu_enr_race30 %>% filter(NAME %in% c("California", "Texas", "Florida", "Ne
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr73),
 
 ### ACS1 - Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
 ```{r}
@@ -1734,6 +1680,8 @@ temp_edu_enr_race29 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr74),
+
 
 ```{r}
 temp_edu_enr_race29 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
@@ -1742,7 +1690,7 @@ temp_edu_enr_race29 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Me
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr75),
 
 ```{r}
 temp_edu_enr_race29 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
@@ -1751,7 +1699,7 @@ temp_edu_enr_race29 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, F
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr76),
 
 ```{r}
 temp_edu_enr_race29 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
@@ -1760,7 +1708,7 @@ temp_edu_enr_race29 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-M
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr77),
 
 ```{r}
 temp_edu_enr_race29 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
@@ -1769,7 +1717,7 @@ temp_edu_enr_race29 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr78),
 
 ### ACS1 - Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
 ```{r}
@@ -1803,7 +1751,7 @@ temp_edu_enr_race28 %>% filter(NAME %in% c("Los Angeles County, California", "Co
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr79),
 
 ### ACS1 - Education Enrollment Levels in Los Angeles County (2012-2020)
 ```{r}
@@ -1829,7 +1777,6 @@ temp_edu_enr_race28 <- acs1_county_data %>%
     )) %>% 
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
-## graphs, counties
 ## counties
 temp_edu_enr_race28 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
@@ -1837,7 +1784,7 @@ temp_edu_enr_race28 %>% filter(NAME %in% c("Los Angeles County, California")) %>
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr80),
 
 ### ENROLLMENT RATES IN GRADUATE OR PROFESSIONAL SCHOOL BY RACE (2012-2020)
 
@@ -1872,6 +1819,7 @@ temp_edu_enr_race33 %>% filter(NAME %in% c("California", "Texas", "Florida", "Ne
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr81),
 
 ### ACS1 - Education Enrollment Levels in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
 ```{r}
@@ -1906,7 +1854,7 @@ temp_edu_enr_race32 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr82),
 
 ```{r}
 temp_edu_enr_race32 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
@@ -1915,7 +1863,7 @@ temp_edu_enr_race32 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Me
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr83),
 
 ```{r}
 temp_edu_enr_race32 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
@@ -1924,7 +1872,7 @@ temp_edu_enr_race32 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, F
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr84),
 
 ```{r}
 temp_edu_enr_race32 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
@@ -1933,7 +1881,7 @@ temp_edu_enr_race32 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-M
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr85),
 
 ```{r}
 temp_edu_enr_race32 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
@@ -1942,7 +1890,7 @@ temp_edu_enr_race32 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr86),
 
 ### ACS1 - Education Enrollment Levels in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
 ```{r}
@@ -1976,6 +1924,7 @@ temp_edu_enr_race31 %>% filter(NAME %in% c("Los Angeles County, California", "Co
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+In Figure \@ref(fig:temp-edu-enr87),
 
 ### ACS1 - Education Enrollment Levels in Los Angeles County (2012-2020)
 ```{r}
@@ -2008,5 +1957,5 @@ temp_edu_enr_race31 %>% filter(NAME %in% c("Los Angeles County, California")) %>
   xlab('Year') + ylab('Percent') +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-
+In Figure \@ref(fig:temp-edu-enr88),
 
