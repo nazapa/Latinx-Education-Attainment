@@ -1,10 +1,15 @@
 ---
-title: "Latinx Education Attainment and Enrollment Rates (2012-2020) Using the American Community Survey (ACS) Census Data"
+title: "Latinx Education Attainment and Enrollment Rates (2012-2020) Using the American Community Survey (ACS)"
 author: "Paula Nazario, MPP Student at the UCLA Luskin School of Public Affairs"
-date: "June 3, 2022"
+date: "June 22, 2022"
 output: 
   bookdown::html_document2:
+    toc: true
+    toc_depth: 2
     number_sections: false
+    bibliography: references.bib
+    csl: asm.csl
+    link-citations: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -34,7 +39,7 @@ theme_set(
 )
 ```
 
-### Research Questions
+## RESEARCH QUESTIONS
 1. How has the educational attainment rates for Latinx students changed in the past 8 years (e.g., 2012-2020) in areas that are highly populated by Latinx communities?
     a. How has the educational attainment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the state level?
     b. How has the educational attainment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the metropolitan level?
@@ -45,18 +50,36 @@ theme_set(
     b. How has the educational enrollment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the metropolitan level?
     c. How has the educational enrollment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the county level?
 
-### Latinx Student Educational Outcomes
-[BACKGROUND HERE; NEED ASSISTANCE INCLUDING CITATIONS HERE]
+## LATINX STUDENT EDUCATIONAL OUTCOMES
+Latino students are expected to increase by 25% by 2030 (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). Now more than ever, it is important to create policies and programs that increase higher education completion rates of Latino students to put them on the pathway for shared economic prosperity (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf).  A college graduate with a bachelor’s degree is 24% more likely to be employed and earn about $32,000 annually and $1 million higher over a lifetime (https://www.aplu.org/our-work/5-archived-projects/college-costs-tuition-and-financial-aid/publicuvalues/societal-benefits.html). In 2019, the average median income for recent college graduates with a bachelor’s degree was about $44,000 per year, in comparison to high school graduates who had an average median income earning of about $33,000 per year (https://www.aplu.org/our-work/5-archived-projects/college-costs-tuition-and-financial-aid/publicuvalues/societal-benefits.html). Those who obtain a bachelor’s degree are more than twice as likely to volunteer, contribute about 3.5 times more money to charity, and 75% vote in presidential elections. College graduates are also less likely to rely on government assistance programs such as medicaid, housing subsidies, nutrition assistance, unemployment benefits, etc (https://www.aplu.org/our-work/5-archived-projects/college-costs-tuition-and-financial-aid/publicuvalues/societal-benefits.html). Furthermore, college graduates are 3.5 times less likely to be impoverished and about 5 times less likely to be in prison. It is evident that there are many benefits for students to pursue a higher education degree, which means that these opportunities can be even greater for Latino students.
 
+Latino Students & Higher Education Completion Rates:
 
-### LATINX EDUCATION ATTAINMENT BY GENDER (2012-2020)
+While pursuing higher education has many positive externalities in our society, Latino students are lagging behind the rest of their peers in terms of college completion rates. According to Excelencia in Education, Latinos need to earn 6.2 million degrees by 2020 in order for the U.S. to be the top ranked in the world for college degree attainment (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). In the U.S., 21% of Latino students ages 18 to 34 were enrolled in higher education in comparison to 24% of their white non-Latino peers (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). In terms of degree attainment, 24% of Latino adults who were 25 years of age or older earned an associate’s degree or higher, in comparson to 46% of white non-Latino adults (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). 
+
+California has the largest Latino population and Latinos graduate from 4-year institutions of higher education at higher rates nationally  (https://www.edexcelencia.org/research/latino-college-completion/california). Yet, California is behind in the number of Latino students who complete a college education (https://www.edexcelencia.org/research/latino-college-completion/california). About 43% of Latino students are represented in California’s public higher education system, 61% of California’s Latino population lives in Southern California, 40% of Latinos attended college, and 60% of Latinos did not attend college (https://collegecampaign.org/wp-content/uploads/2021/11/FINAL-SHE-Latinx-web.pdf). In terms of bachelor degree attainment levels, Latinos have the lowest rates in comparison to other racial/ethnic subgroups in California. Thus, 6% and 14% of Latinos received an associate and bachelor’s degree or higher, respectively, in contrast to 9% and 46% of white students who received an associate and bachelor’s degree or higher, respectively (https://collegecampaign.org/wp-content/uploads/2021/11/FINAL-SHE-Latinx-web.pdf).  
+
+Even though this data is alarming, there are institutions where Latino students have been able to successfully enroll and graduate from 2 and 4-year institutions. In Fall 2018, Miami Dade College (public, 4-year institution), Florida International University (public, 4-year institution), South Texas College (public, 4-year institution), Lone Star College System (public, 2-year institution), and El Paso Communtiy College (public, 2-year institution) were the top institutions that enrolled the most number of Latino undergraduate students (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf ; U.S. Department of Education, National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS), 2018 Fall Enrollment, Graduation Rates Survey and Institutional Characteristics Survey.). In terms of the most associate degrees awarded to Latino students, Miami Dade College awarded 6,670 degrees, followed by South Texas College (3,923), El Paso Community College (2,975), Lone Star College System (2,654), and Valencia College (2,574) (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). Furthermore, in terms of bachelor degrees awarded to Latino students, the top five institutions included Florida International University (6,764), California State University, Fullerton (3,660), The University of Texas Rio Grande Valley (3,618), California State University, Northridge (3,573), and California State University, Long Beach (3,417) (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). Although these institutions have done great work in ensuring that more Latino students are enrolling and completing their associate and bachelor degrees, we still have a long way to go to ensure that Latino students across the U.S. feel supported to continue their education. 
+
+First-Generation College Students:
+
+It is especially important for first-generation college students to complete a higher education degree because it would allow them to start building generational wealth and allow them to acquire the foundational skills to move up in the economic ladder. To put things into perspective, the average median wealth of households that are headed by a first-generation college graduate is about $152,000, which is behind that of a second-generation college graduate, who has a median wealth of about $135,800 (https://www.pewresearch.org/social-trends/2021/05/18/first-generation-college-graduates-lag-behind-their-peers-on-key-economic-outcomes/). In terms of average median household income, a first-generation college graduate earns about $99,600, which is lower than the income of a second-generation graduate, who earns about $135,800 (https://www.pewresearch.org/social-trends/2021/05/18/first-generation-college-graduates-lag-behind-their-peers-on-key-economic-outcomes/). Therefore, it is important to ensure that Latinos who identify as first-generation college students enroll and persist in higher education so that they can reap the benefits from a higher education degree and build generational wealth. Unfortunately, the statistics are not the best when it comes to adults who did not graduate from college. According to the Pew Research Center, “Among adults who have not graduated from college, there is no substantial economic boost associated with having a parent with at least a bachelor’s degree” (https://www.pewresearch.org/social-trends/2021/05/18/first-generation-college-graduates-lag-behind-their-peers-on-key-economic-outcomes/).
+
+## SUMMARY
+In every county that is heavily populated by Latinx folks, the percent of students with a bachelor's degree or higher has increased over the last 10 years.
+
+Across all the counties analyzed, the percent of Latina educational levels (bachelor's degree or higher) are greater than it is for Latinos.
+
+Nativity/Legal status over time in the United States: FL and NY Latinos have higher educational attainment, but they are more likely to be citizens or descended from citizens (e.g., Cubans in FL, Puerto Ricans in NY, etc.). In contrast, TX and CA tend to have more non-citizen Latinos and first-generation students (e.g., Mexicans, Central Americans, etc.).
+	
+## LATINX EDUCATION ATTAINMENT BY GENDER (2012-2020)
 
 ### ACS1 - Latinx Education Attainment Rates in California, Texas, Florida, and New York States (2012-2020)
-I used the ACS 1-year and ACS 5-year level data to determine the educational attainment rates of Latinx students between 2012 and 2020 in the following states: California, Texas, Florida, and New York. All of these states have seen an increase in the Latinx population since 2010. Therefore, I want to generate line graphs of the educational attainment rates of Latinxs in each state individually and then compare them against each other to analyze any patterns in the educational rates of each state. 
+I used the ACS 1-year and ACS 5-year level data to determine the educational attainment rates of Latinx students between 2012 and 2020 in the following states: California, Texas, Florida, and New York. All of these states have seen an increase in the Latinx population since 2010. Therefore, I want to generate line graphs of the educational attainment rates of Latinx students in each state individually and then compare them against each other to analyze any patterns in the educational rates of each state. 
 
 ```{r temp-edu-attain1, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Rates in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs1 - education attainment, state level
-temp_edu_attain3 <- acs1_state_data %>% 
+temp_edu_attain1 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
   mutate(C15002I_012E = C15002I_003E + C15002I_008E,
          C15002I_013E = C15002I_004E + C15002I_009E,
@@ -86,10 +109,11 @@ temp_edu_attain3 <- acs1_state_data %>%
   group_by(GEOID, NAME, YEAR, gender) %>% 
   mutate(pct = values/sum(values))
 # graph, states: CA, TX, FL, NY
-temp_edu_attain3 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+temp_edu_attain1 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-attain1), we can see the Latinx Education Attainment Rates for California, Florida, New York, and Texas between 2012-2020. In these graphs we can see that among the four states, there is a higher percentage of Latinx students obtaining bachelor’s degrees or higher in Florida, followed by New York, Texas and California and in all states more Latina women are obtaining these degrees. Among the four states, California has the most Latinx students obtaining less than high school diplomas, with a higher percentage of Latino males obtaining these diplomas.
 
@@ -128,13 +152,12 @@ temp_edu_attain2 <- acs1_metro_data %>%
   group_by(GEOID, NAME, YEAR, gender) %>% 
   mutate(pct = values/sum(values))
 
-# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area;
-# Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; 
-# Providence-Warwick, RI-MA Metro Area
+# graph
 temp_edu_attain2 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-attain2), we can see the Latinx educational attainment rates for students in the  Los Angeles-Long Beach-Anaheim, California Metro Area between 2012-2020. In this line graph, we can see that there is an upward trend in the percentage of Latinx students obtaining bachelor’s degrees or higher degrees. When comparing Latina female and Latino male students, we can see that more Latina female students are earning bachelor’s degrees or higher than Latino male students. On the other hand, it seems that more Latino male students are earning high school diplomas in comparison to Latina female students.
 
@@ -142,7 +165,8 @@ In Figure \@ref(fig:temp-edu-attain2), we can see the Latinx educational attainm
 temp_edu_attain2 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-attain3), we can see the Latinx Education Attainment Rates in New York-Newark-Jersey City, NY-NJ-PA Metro Area between 2012-2020. We can see that there is a downward trend in the percentage of Latinx students who are obtaining less than a high school diploma. In terms of the attainment of bachelor’s degrees, there seems to be a drastic increase in these degrees after 2016 and from there it continues to increase. Also, Latina females obtained a higher percentage of bachelor degrees or higher in comparison to Latino males. 
 
@@ -150,7 +174,8 @@ In Figure \@ref(fig:temp-edu-attain3), we can see the Latinx Education Attainmen
 temp_edu_attain2 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-attain4), we can see the Latinx Education Attainment Rates in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area between 2012-2020. In this graph, we can see that there is an upward trend in the amount of Latinx students who obtain bachelor’s degrees or higher and downward trend in the number of Latinx students who obtained less than a high school diploma. Again, it seems that Latina female students are earning more degrees than Latino male students.
 
@@ -159,7 +184,8 @@ In Figure \@ref(fig:temp-edu-attain4), we can see the Latinx Education Attainmen
 temp_edu_attain2 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-attain5), we can see the Latinx education attainment rates in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area between 2012-2020. In this line graph, we can see that a higher percentage of Latinx students are obtaining less than a high school diploma, followed by bachelor’s degrees or higher, high school diploma, and some college or associate’s degree. 
 
@@ -168,15 +194,15 @@ In Figure \@ref(fig:temp-edu-attain5), we can see the Latinx education attainmen
 temp_edu_attain2 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-attain6), we can see the Latinx Education Attainment Rates in Providence-Warwick, RI-MA Metro Area between 2012-2020. In this line graph we can see that among all of the education rates, there was a spike in the percentage of Latinx high school graduates between 2016 and 2018. Also, there were more Latino males who graduated high school and earned a high school diploma than Latina women. After 2018, there was a decrease in the percentage of Latinx students who earned a high school diploma.
-
 
 ### ACS1 - Latinx Education Attainment Rates in Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
 ```{r temp-edu-attain7, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Rates in Bexar County, Texas; Cook County, Illinois; Los Angeles County, California; Maricopa County, Arizona; Orange County, California; Riverside County, California; San Bernardino County, California; San Diego County, California (2012-2020)"}
 ## ACS1 - Education Attainment Level, Counties 
-temp_edu_attain1 <- acs1_county_data %>% 
+temp_edu_attain3 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
   mutate(C15002I_012E = C15002I_003E + C15002I_008E,
          C15002I_013E = C15002I_004E + C15002I_009E,
@@ -207,18 +233,19 @@ temp_edu_attain1 <- acs1_county_data %>%
   mutate(pct = values/sum(values))
 
 # graph, counties: Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, San Diego County, CA
-temp_edu_attain1 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+temp_edu_attain3 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
                                         "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-attain7), I created line graphs for the educational attainment rates of Latinx in the counties that are most populated by Latinx communities. As seen in Figure \@ref(fig:temp-edu-attain7), we can see that there is an overall trend in all the counties, in which the percent of bachelor’s degrees attained were low for Latina female and Latino male students in comparison to the attainment of a high school diploma, less than a high school diploma, and some college or associate's degree. 
 
 ### ACS1 - Latinx Education Attainment Rates in Los Angeles County (2012-2020)
 ```{r temp-edu-attain8, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Rates in Los Angeles County, California (2012-2020)"}
 ## ACS1 - Education Attainment Level, County Level
-temp_edu_attain1 <- acs1_county_data %>% 
+temp_edu_attain3 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
   mutate(C15002I_012E = C15002I_003E + C15002I_008E,
          C15002I_013E = C15002I_004E + C15002I_009E,
@@ -249,17 +276,18 @@ temp_edu_attain1 <- acs1_county_data %>%
   mutate(pct = values/sum(values))
 
 # Graph, Los Angeles County
-temp_edu_attain1 %>% filter(NAME == "Los Angeles County, California") %>%
+temp_edu_attain3 %>% filter(NAME == "Los Angeles County, California") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + 
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-attain8), we can see more closely the Latinx education attainment rates in the Los Angeles County, California. In this line graph, we can see that the educational attainment rates of Latinx remain low for the attainment of a bachelor’s degree or higher, followed by some college or associate’s degree, high school diploma, and less than a high school diploma. From this line graph, we can see that Latinx students in Los Angeles County, California between 2012-2020 have not earned many bachelor’s degrees or higher degrees and have earned less than a high school diploma. Still, it seems that between 2012-2020, there has been an upward trend in the number of Latinx students attaining bachelor’s degrees or higher degrees and the number of Latinx students attaining less than a high school diploma has been steadily decreasing. 
 
 ### ACS5 - Latinx Education Attainment Rates in California, Texas, Florida, and New York States (2012-2020)
 ```{r temp-edu-attain9, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Rates in California, Texas, Florida and New York States (2012-2020)"}
 ## acs5 - education attainment, state level
-temp_edu_attain6 <- acs5_state_data %>% 
+temp_edu_attain4 <- acs5_state_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
   mutate(C15002I_012E = C15002I_003E + C15002I_008E,
          C15002I_013E = C15002I_004E + C15002I_009E,
@@ -289,10 +317,11 @@ temp_edu_attain6 <- acs5_state_data %>%
   group_by(GEOID, NAME, YEAR, gender) %>% 
   mutate(pct = values/sum(values))
 # graph, states: CA, TX, FL, NY
-temp_edu_attain6 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+temp_edu_attain4 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-attain9), we can see the Latinx Education Attainment Rates for California, Florida, New York, and Texas between 2012-2020 using the ACS 5-year level data. Again, the line graphs seem to reflect the same trends as the previous line graph in Figure \@ref(fig:temp-edu-attain8).
 
@@ -335,46 +364,51 @@ temp_edu_attain5 <- acs5_metro_data %>%
 temp_edu_attain5 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-attain10),
+In Figure \@ref(fig:temp-edu-attain10), we can see that in the Los Angeles-Long Beach-Anaheim, CA Metro Area, the percent of Latinx students obtaining less than a high school diploma is highest, compared to the percent of Latinx students obtaining a high school diploma, some college or associate's degree, and bachelor's degree or higher.
 
 ```{r temp-edu-attain11, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Rates in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_attain5 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-attain11),
+In Figure \@ref(fig:temp-edu-attain11), we can see that in the New York-Newark-Jersey City, NY-NJ-PA Metro Area, between 2014-2020, the percent of Latinx students obtaining less than a high school diploma has decreased over time. On the other hand, the percent of Latinx students obtaining a bachelor's degree or higher has increased.
 
 ```{r temp-edu-attain12, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Rates in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_attain5 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-attain12),
+In Figure \@ref(fig:temp-edu-attain12) we can see that in the Miami-Fort Lauderdale-West Palm Beach, FL Metro Area there is a significant decrease in the percent of Latinx students who obtained less than a high school diploma and there is a significant increase in the percent of students who obtained a bachelor's degree or higher. The graph also shows that the percent of Latinx students who graduated high school remained consistent and after 2015, it slightly decreased. 
 
 ```{r temp-edu-attain13, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Rates in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_attain5 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-attain13),
+In Figure \@ref(fig:temp-edu-attain13), we can see that in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area there is a higher percent of Latinx male students who obtained less than a high school diploma.
 
 ```{r temp-edu-attain14, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Rates in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_attain5 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-attain14),
+In Figure \@ref(fig:temp-edu-attain14), we can see that in the Providence-Warwick, RI-MA Metro Area, there is a higher percent of Latinx students who graduated high school and the percent of Latinx students who earned less than a high school diploma significantly decreased.
 
 ### ACS5 - Latinx Education Attainment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
 ```{r temp-edu-attain15, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs5 - education attainment, county level
-temp_edu_attain4 <- acs5_county_data %>% 
+temp_edu_attain6 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
   mutate(C15002I_012E = C15002I_003E + C15002I_008E,
          C15002I_013E = C15002I_004E + C15002I_009E,
@@ -404,19 +438,19 @@ temp_edu_attain4 <- acs5_county_data %>%
   group_by(GEOID, NAME, YEAR, gender) %>% 
   mutate(pct = values/sum(values))
 # graph, counties: Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, San Diego County, CA
-temp_edu_attain4 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+temp_edu_attain6 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
                                         "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-attain15),
-
+In Figure \@ref(fig:temp-edu-attain15), we can see that in the Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA, the percent of Latinx students who obtained a bachelor's degree was lowest among the other education levels.
 
 ### ACS5 - Latinx Education Attainment Rates in Los Angeles County, CA (2012-2020)
 ```{r temp-edu-attain16, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Rates in Los Angeles County, California (2012-2020)"}
 ## acs5 - education attainment, county level
-temp_edu_attain4 <- acs5_county_data %>% 
+temp_edu_attain6 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
   mutate(C15002I_012E = C15002I_003E + C15002I_008E,
          C15002I_013E = C15002I_004E + C15002I_009E,
@@ -447,20 +481,20 @@ temp_edu_attain4 <- acs5_county_data %>%
   mutate(pct = values/sum(values))
 
 # graph, los angeles county
-temp_edu_attain4 %>% filter(NAME == "Los Angeles County, California") %>%
+temp_edu_attain6 %>% filter(NAME == "Los Angeles County, California") %>%
   ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + 
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-attain16),
+In Figure \@ref(fig:temp-edu-attain16), we can see that there is a higher percent of Latinx students who obtained less than a high school diploma in comparison to the percent of Latinx students who obtained a bachelor's degree in the Los Angeles county. 
 
+## LATINX ENROLLNMENT IN NURSERY SCHOOL, K-12, COLLEGE/UNIVERSITIES, AND GRADUATE OR PROFESSIONAL SCHOOL (2012-2020)
 
-### LATINX ENROLLNMENT IN NURSERY SCHOOL, K-12, COLLEGE/UNIVERSITIES, AND GRADUATE OR PROFESSIONAL SCHOOL (2012-2020)
-
-### ACS1 - Latinx Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
-```{r temp-edu-attain17, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)"}
+### ACS1 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)
+```{r temp-edu-attain17, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs1 - education enrollment, state level
-temp_edu_enr9 <- acs1_state_data %>% 
+temp_edu_enr7 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
   mutate(B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E
          + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
@@ -482,15 +516,16 @@ temp_edu_enr9 <- acs1_state_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 # graph, states: CA, TX, FL, NY
-temp_edu_enr9 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+temp_edu_enr7 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr17),
+In Figure \@ref(fig:temp-edu-enr17), we can see that there are a larger percent of Latinx students enrolled in K-12 school across California, Texas, Florida, and New York. On the other hand, these graphs also indicate that there are very few Latinx students enrolled in nursery school and graduate or professional school in California, Texas, Florida, and New York. 
 
-### ACS1 - Latinx Education Enrollment Rates in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
-```{r temp-edu-enr18, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Rates in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
+### ACS1 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r temp-edu-enr18, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 ## acs1 - education enrollment, metro level 
 temp_edu_enr8 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -518,46 +553,51 @@ temp_edu_enr8 <- acs1_metro_data %>%
 temp_edu_enr8 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr18),
+In Figure \@ref(fig:temp-edu-enr18), the graph indicates that there is a higher percent of Latinx students enrolled in K-12 school, followed by college/university, nursery school, and graduate or professional school in the Los Angeles-Long Beach-Anaheim, CA Metro Area.
 
-```{r temp-edu-enr19, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Rates in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
+```{r temp-edu-enr19, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_enr8 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr19),
+In Figure \@ref(fig:temp-edu-enr19), in the New York-Newark-Jersey City, NY-NJ-PA Metro Area, there is a higher percent of Latinx students enrolled in K-12 school followed by college/university, nursery school, and graduate or professional school. 
 
-```{r temp-edu-enr20, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Rates in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
+```{r temp-edu-enr20, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_enr8 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr20),
+In Figure \@ref(fig:temp-edu-enr20), in the Miami-Fort Lauderdale-West Palm Beach, FL Metro Area, there is a higher percent of Latinx students enrolled in K-12 school. After 2014, there seems to be a decrease in the enrollment rates of Latinx students in college/universities.
 
-```{r temp-edu-enr21, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Rates in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
+```{r temp-edu-enr21, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_enr8 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr21),
+In Figure \@ref(fig:temp-edu-enr21), we can see that after 2013 there seems to be an increase in the enrollment of Latinx students in K-12 school in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area. On the other hand, there seems to be a slight decrease in the enrollment rates of Latinx students in college/universities. 
 
-```{r temp-edu-enr22, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Rates in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
+```{r temp-edu-enr22, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_enr8 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr22),
+In Figure \@ref(fig:temp-edu-enr22), we can see that in the Providence-Warwick, RI-MA Metro Area there is a higher percent of Latinx students enrolled in K-12 schools and there is a low percent of Latinx students enrolled in graduate or professional school.
 
-### ACS1 - Latinx Education Enrollment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r temp-edu-enr23, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
+### ACS1 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-enr23, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level 
-temp_edu_enr7 <- acs1_county_data %>% 
+temp_edu_enr9 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
   mutate(B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E
          + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
@@ -580,18 +620,19 @@ temp_edu_enr7 <- acs1_county_data %>%
   mutate(pct = values/sum(values))
 
 ## counties
-temp_edu_enr7 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+temp_edu_enr9 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
                                         "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr23),
+In Figure \@ref(fig:temp-edu-enr23), the graphs depict the Latinx enrollment rates in nursery, K-12, college/universities, and graduate or professional school in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA. Across all these states, a large percentage of Latinx students are enrolled in K-12 school. On the other hand, there is a few percentage Latinx students enrolled in college/universities, nursery school, and graduate or professional school. 
 
-### ACS1 - Latinx Education Enrollment Rates in Los Angeles County, CA (2012-2020)
-```{r temp-edu-enr24, fig.cap= "ACS 1-Year Level Data: Latinx Education Enrollment Rates in Los Angeles County, CA (2012-2020)"}
+### ACS1 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA (2012-2020)
+```{r temp-edu-enr24, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level 
-temp_edu_enr7 <- acs1_county_data %>% 
+temp_edu_enr9 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
   mutate(B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E
          + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
@@ -614,17 +655,18 @@ temp_edu_enr7 <- acs1_county_data %>%
   mutate(pct = values/sum(values))
 
 ## graph, los angeles county, california
-temp_edu_enr7 %>% filter(NAME == "Los Angeles County, California") %>%
+temp_edu_enr9 %>% filter(NAME == "Los Angeles County, California") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + 
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr24),
+In Figure \@ref(fig:temp-edu-enr24), we can see that in the Los Angeles county, there is a higher percent of Latinx students enrolled in K-12 school and there are less students enrolled in graduate or professional school.
 
-### ACS5 - Latinx Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
-```{r temp-edu-enr25, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)"}
+### ACS5 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)
+```{r temp-edu-enr25, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs5 - education enrollment, state level
-temp_edu_enr12 <- acs5_state_data %>% 
+temp_edu_enr10 <- acs5_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
   mutate(B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E
          + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
@@ -646,15 +688,16 @@ temp_edu_enr12 <- acs5_state_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 # graph, states: CA, TX, FL, NY
-temp_edu_enr12 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+temp_edu_enr10 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr25),
 
-### ACS5 - Latinx Education Enrollment Rates in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
-```{r temp-edu-enr26, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Rates in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
+### ACS5 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r temp-edu-enr26, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
 ## acs5 - education enrollment, metro level 
 temp_edu_enr11 <- acs5_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -677,52 +720,55 @@ temp_edu_enr11 <- acs5_metro_data %>%
                                  TRUE ~ "total")) %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
-# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area;
-# Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; 
-# Providence-Warwick, RI-MA Metro Area
+# graph
 temp_edu_enr11 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr26),
 
-```{r temp-edu-enr27, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Rates in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
+```{r temp-edu-enr27, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr27),
 
-```{r temp-edu-enr28, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Rates in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
+```{r temp-edu-enr28, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr28),
 
-```{r temp-edu-enr29, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Rates in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
+```{r temp-edu-enr29, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr29),
 
-```{r temp-edu-enr30, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Rates in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
+```{r temp-edu-enr30, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr30),
 
-### ACS5 - Latinx Education Enrollment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
-```{r temp-edu-enr31, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
+### ACS5 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-enr31, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs5 - education enrollment, county level 
-temp_edu_enr10 <- acs5_county_data %>% 
+temp_edu_enr12 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
   mutate(B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E
          + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
@@ -744,17 +790,18 @@ temp_edu_enr10 <- acs5_county_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 ## counties
-temp_edu_enr10 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas", "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+temp_edu_enr12 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas", "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr31),
 
-### ACS5 - Latinx Education Enrollment Rates in Los Angeles County (2012-2020)
-```{r temp-edu-enr32, fig.cap= "ACS 5-Year Level Data: Latinx Education Enrollment Rates in Los Angeles County, CA (2012-2020)"}
+### ACS5 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County (2012-2020)
+```{r temp-edu-enr32, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA (2012-2020)"}
 ## acs5 - education enrollment, county level 
-temp_edu_enr10 <- acs5_county_data %>% 
+temp_edu_enr12 <- acs5_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
   mutate(B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E
          + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
@@ -777,19 +824,20 @@ temp_edu_enr10 <- acs5_county_data %>%
   mutate(pct = values/sum(values))
 
 ## graph, los angeles county, california
-temp_edu_enr10 %>% filter(NAME == "Los Angeles County, California") %>%
+temp_edu_enr12 %>% filter(NAME == "Los Angeles County, California") %>%
   ggplot(aes(x = YEAR, y = pct, color = enrollment_level)) + geom_line() + 
   xlab('Year') + ylab('Percent of Latinx') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr32),
 
-### ENROLLMENT RATES IN NURSERY SCHOOL BY RACE/ETHNICITY (2012-2020)
+## ENROLLMENT RATES IN NURSERY SCHOOL BY RACE/ETHNICITY (2012-2020)
 
 ### ACS1 - Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
 ```{r temp-edu-enr33, fig.cap= "ACS 1-Year Level Data: Nursery School Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs1 - education enrollment, state level, (educational enrollment rates of students enrolled in nursery school)
-temp_edu_enr_race26 <- acs1_state_data %>% 
+temp_edu_enr_race13 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_003E")) %>% 
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -811,17 +859,18 @@ temp_edu_enr_race26 <- acs1_state_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 # graph, states: CA, TX, FL, NY
-temp_edu_enr_race26 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+temp_edu_enr_race13 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr33),
 
 ### ACS1 - Education Enrollment Rates in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
 ```{r temp-edu-enr34, fig.cap= "ACS 1-Year Level Data: Nursery School Enrollment Rates in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
 ## acs1 - education enrollment, metro level, (educational enrollment rates of students enrolled in nursery school)
-temp_edu_enr_race27 <- acs1_metro_data %>% 
+temp_edu_enr_race14 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_003E")) %>% 
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -845,49 +894,54 @@ temp_edu_enr_race27 <- acs1_metro_data %>%
 # graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area;
 # Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; 
 # Providence-Warwick, RI-MA Metro Area
-temp_edu_enr_race27 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
+temp_edu_enr_race14 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr34),
 
 ```{r temp-edu-enr35, fig.cap= "ACS 1-Year Level Data: Nursery School Enrollment Rates in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
-temp_edu_enr_race27 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
+temp_edu_enr_race14 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr35),
 
 ```{r temp-edu-enr36, fig.cap= "ACS 1-Year Level Data: Nursery School Enrollment Rates in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
-temp_edu_enr_race27 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
+temp_edu_enr_race14 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr36),
 
 ```{r temp-edu-enr37, fig.cap= "ACS 1-Year Level Data: Nursery School Enrollment Rates in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
-temp_edu_enr_race27 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
+temp_edu_enr_race14 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr37),
 
 ```{r temp-edu-enr38, fig.cap= "ACS 1-Year Level Data: Nursery School Enrollment Rates in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
-temp_edu_enr_race27 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
+temp_edu_enr_race14 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr38),
 
 ### ACS1 - Education Enrollment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
 ```{r temp-edu-enr39, fig.cap= "ACS 1-Year Level Data: Nursery School Enrollment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in nursery school)
-temp_edu_enr_race25 <- acs1_county_data %>% 
+temp_edu_enr_race15 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_003E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -909,17 +963,18 @@ temp_edu_enr_race25 <- acs1_county_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 ## counties
-temp_edu_enr_race25 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas", "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+temp_edu_enr_race15 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas", "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr39),
 
 ### ACS1 - Education Enrollment Rates in Los Angeles County, CA (2012-2020)
 ```{r temp-edu-enr40, fig.cap= "ACS 1-Year Level Data: Nursery School Enrollment Rates in Los Angeles County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in nursery school)
-temp_edu_enr_race25 <- acs1_county_data %>% 
+temp_edu_enr_race15 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_003E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -941,19 +996,319 @@ temp_edu_enr_race25 <- acs1_county_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 ## LA county
-temp_edu_enr_race25 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
+temp_edu_enr_race15 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr40),
 
-### ENROLLMENT RATES IN COLLEGE/UNIVERSITIES BY RACE/ETHNICITY (2012-2020)
+## ENROLLMENT RATES IN K-12 BY RACE/ETHNICITY (2012-2020) 
+
+### ACS1 - Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
+```{r temp-edu-enr57, fig.cap= "ACS 1-Year Level Data: K-12 School Enrollment Rates By Race/Ethnicity in California, Texas, Florida, and New York States (2012-2020)"}
+### state data; remember to keep the select and mutate code for these graphs!
+temp_edu_enr_race22 <- acs1_state_data %>% 
+  mutate(B14007B_020E = B14007B_004E + B14007B_005E + B14007B_006E ##BLACK
+         + B14007B_007E + B14007B_008E + B14007B_009E + B14007B_010E
+         + B14007B_011E + B14007B_012E + B14007B_013E + B14007B_014E
+         + B14007B_015E + B14007B_016E,
+        B14007C_020E = B14007C_004E + B14007C_005E + B14007C_006E ##AMERICAN INDIAN
+         + B14007C_007E + B14007C_008E + B14007C_009E + B14007C_010E
+         + B14007C_011E + B14007C_012E + B14007C_013E + B14007C_014E
+         + B14007C_015E + B14007C_016E,
+        B14007D_020E = B14007D_004E + B14007D_005E + B14007D_006E ##ASIAN
+         + B14007D_007E + B14007D_008E + B14007D_009E + B14007D_010E
+         + B14007D_011E + B14007D_012E + B14007D_013E + B14007D_014E
+         + B14007D_015E + B14007D_016E,
+        B14007E_020E = B14007E_004E + B14007E_005E + B14007E_006E ##Native Hawaiian and Other Pacific Islander
+         + B14007E_007E + B14007E_008E + B14007E_009E + B14007E_010E
+         + B14007E_011E + B14007E_012E + B14007E_013E + B14007E_014E
+         + B14007E_015E + B14007E_016E,
+        B14007F_020E = B14007F_004E + B14007F_005E + B14007F_006E ##OTHER
+         + B14007F_007E + B14007F_008E + B14007F_009E + B14007F_010E
+         + B14007F_011E + B14007F_012E + B14007F_013E + B14007F_014E
+         + B14007F_015E + B14007F_016E,
+        B14007G_020E = B14007G_004E + B14007G_005E + B14007G_006E ##Two or More Races
+         + B14007G_007E + B14007G_008E + B14007G_009E + B14007G_010E
+         + B14007G_011E + B14007G_012E + B14007G_013E + B14007G_014E
+         + B14007G_015E + B14007G_016E,
+        B14007H_020E = B14007H_004E + B14007H_005E + B14007H_006E ##WHITE
+         + B14007H_007E + B14007H_008E + B14007H_009E + B14007H_010E
+         + B14007H_011E + B14007H_012E + B14007H_013E + B14007H_014E
+         + B14007H_015E + B14007H_016E,
+        B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E ##LATINO
+         + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
+         + B14007I_011E + B14007I_012E + B14007I_013E + B14007I_014E
+         + B14007I_015E + B14007I_016E) %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_020E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_020E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_020E" = "Black", 
+      "B14007C_020E" = "American Indian and Alaska Native",
+      "B14007D_020E" = "Asian",
+      "B14007E_020E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_020E" = "Other",
+      "B14007G_020E" = "Two or More Races",
+      "B14007H_020E" = "white",
+      "B14007I_020E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+# graph, states: CA, TX, FL, NY
+temp_edu_enr_race22 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr57),
+
+### ACS1 - Education Enrollment Rates in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
+```{r temp-edu-enr58, fig.cap= "ACS 1-Year Level Data: K-12 School Enrollment Rates By Race/Ethnicity in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
+## acs1 - education enrollment, metro level, (educational enrollment rates of students enrolled in graduate or professional school)
+temp_edu_enr_race23 <- acs1_metro_data %>% 
+  mutate(B14007B_020E = B14007B_004E + B14007B_005E + B14007B_006E ##BLACK
+         + B14007B_007E + B14007B_008E + B14007B_009E + B14007B_010E
+         + B14007B_011E + B14007B_012E + B14007B_013E + B14007B_014E
+         + B14007B_015E + B14007B_016E,
+        B14007C_020E = B14007C_004E + B14007C_005E + B14007C_006E ##AMERICAN INDIAN
+         + B14007C_007E + B14007C_008E + B14007C_009E + B14007C_010E
+         + B14007C_011E + B14007C_012E + B14007C_013E + B14007C_014E
+         + B14007C_015E + B14007C_016E,
+        B14007D_020E = B14007D_004E + B14007D_005E + B14007D_006E ##ASIAN
+         + B14007D_007E + B14007D_008E + B14007D_009E + B14007D_010E
+         + B14007D_011E + B14007D_012E + B14007D_013E + B14007D_014E
+         + B14007D_015E + B14007D_016E,
+        B14007E_020E = B14007E_004E + B14007E_005E + B14007E_006E ##Native Hawaiian and Other Pacific Islander
+         + B14007E_007E + B14007E_008E + B14007E_009E + B14007E_010E
+         + B14007E_011E + B14007E_012E + B14007E_013E + B14007E_014E
+         + B14007E_015E + B14007E_016E,
+        B14007F_020E = B14007F_004E + B14007F_005E + B14007F_006E ##OTHER
+         + B14007F_007E + B14007F_008E + B14007F_009E + B14007F_010E
+         + B14007F_011E + B14007F_012E + B14007F_013E + B14007F_014E
+         + B14007F_015E + B14007F_016E,
+        B14007G_020E = B14007G_004E + B14007G_005E + B14007G_006E ##Two or More Races
+         + B14007G_007E + B14007G_008E + B14007G_009E + B14007G_010E
+         + B14007G_011E + B14007G_012E + B14007G_013E + B14007G_014E
+         + B14007G_015E + B14007G_016E,
+        B14007H_020E = B14007H_004E + B14007H_005E + B14007H_006E ##WHITE
+         + B14007H_007E + B14007H_008E + B14007H_009E + B14007H_010E
+         + B14007H_011E + B14007H_012E + B14007H_013E + B14007H_014E
+         + B14007H_015E + B14007H_016E,
+        B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E ##LATINO
+         + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
+         + B14007I_011E + B14007I_012E + B14007I_013E + B14007I_014E
+         + B14007I_015E + B14007I_016E) %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+# graph
+temp_edu_enr_race23 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr58),
+
+```{r temp-edu-enr59, fig.cap= "ACS 1-Year Level Data: K-12 School Enrollment Rates By Race/Ethnicity in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
+temp_edu_enr_race23 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr59),
+
+```{r temp-edu-enr60, fig.cap= "ACS 1-Year Level Data: K-12 School Enrollment Rates By Race/Ethnicity in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
+temp_edu_enr_race23 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr60),
+
+```{r temp-edu-enr61, fig.cap= "ACS 1-Year Level Data: K-12 School Enrollment Rates By Race/Ethnicity in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
+temp_edu_enr_race23 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr61),
+
+```{r temp-edu-enr62, fig.cap= "ACS 1-Year Level Data: Graduate or Professional School Enrollment Rates By Race/Ethnicity in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
+temp_edu_enr_race23 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr62),
+
+### ACS1 - Education Enrollment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
+```{r temp-edu-enr63, fig.cap= "ACS 1-Year Level Data: K-12 School Enrollment Rates By Race/Ethnicity in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
+temp_edu_enr_race24 <- acs1_county_data %>% 
+  mutate(B14007B_020E = B14007B_004E + B14007B_005E + B14007B_006E ##BLACK
+         + B14007B_007E + B14007B_008E + B14007B_009E + B14007B_010E
+         + B14007B_011E + B14007B_012E + B14007B_013E + B14007B_014E
+         + B14007B_015E + B14007B_016E,
+        B14007C_020E = B14007C_004E + B14007C_005E + B14007C_006E ##AMERICAN INDIAN
+         + B14007C_007E + B14007C_008E + B14007C_009E + B14007C_010E
+         + B14007C_011E + B14007C_012E + B14007C_013E + B14007C_014E
+         + B14007C_015E + B14007C_016E,
+        B14007D_020E = B14007D_004E + B14007D_005E + B14007D_006E ##ASIAN
+         + B14007D_007E + B14007D_008E + B14007D_009E + B14007D_010E
+         + B14007D_011E + B14007D_012E + B14007D_013E + B14007D_014E
+         + B14007D_015E + B14007D_016E,
+        B14007E_020E = B14007E_004E + B14007E_005E + B14007E_006E ##Native Hawaiian and Other Pacific Islander
+         + B14007E_007E + B14007E_008E + B14007E_009E + B14007E_010E
+         + B14007E_011E + B14007E_012E + B14007E_013E + B14007E_014E
+         + B14007E_015E + B14007E_016E,
+        B14007F_020E = B14007F_004E + B14007F_005E + B14007F_006E ##OTHER
+         + B14007F_007E + B14007F_008E + B14007F_009E + B14007F_010E
+         + B14007F_011E + B14007F_012E + B14007F_013E + B14007F_014E
+         + B14007F_015E + B14007F_016E,
+        B14007G_020E = B14007G_004E + B14007G_005E + B14007G_006E ##Two or More Races
+         + B14007G_007E + B14007G_008E + B14007G_009E + B14007G_010E
+         + B14007G_011E + B14007G_012E + B14007G_013E + B14007G_014E
+         + B14007G_015E + B14007G_016E,
+        B14007H_020E = B14007H_004E + B14007H_005E + B14007H_006E ##WHITE
+         + B14007H_007E + B14007H_008E + B14007H_009E + B14007H_010E
+         + B14007H_011E + B14007H_012E + B14007H_013E + B14007H_014E
+         + B14007H_015E + B14007H_016E,
+        B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E ##LATINO
+         + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
+         + B14007I_011E + B14007I_012E + B14007I_013E + B14007I_014E
+         + B14007I_015E + B14007I_016E) %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+
+## counties
+temp_edu_enr_race24 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas", "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr63),
+
+### ACS1 - Education Enrollment Rates in Los Angeles County (2012-2020)
+```{r temp-edu-enr64, fig.cap= "ACS 1-Year Level Data: K-12 School Enrollment Rates By Race/Ethnicity in Los Angeles County, CA (2012-2020)"}
+## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in graduate or professional school)
+temp_edu_enr_race24 <- acs1_county_data %>% 
+  mutate(B14007B_020E = B14007B_004E + B14007B_005E + B14007B_006E ##BLACK
+         + B14007B_007E + B14007B_008E + B14007B_009E + B14007B_010E
+         + B14007B_011E + B14007B_012E + B14007B_013E + B14007B_014E
+         + B14007B_015E + B14007B_016E,
+        B14007C_020E = B14007C_004E + B14007C_005E + B14007C_006E ##AMERICAN INDIAN
+         + B14007C_007E + B14007C_008E + B14007C_009E + B14007C_010E
+         + B14007C_011E + B14007C_012E + B14007C_013E + B14007C_014E
+         + B14007C_015E + B14007C_016E,
+        B14007D_020E = B14007D_004E + B14007D_005E + B14007D_006E ##ASIAN
+         + B14007D_007E + B14007D_008E + B14007D_009E + B14007D_010E
+         + B14007D_011E + B14007D_012E + B14007D_013E + B14007D_014E
+         + B14007D_015E + B14007D_016E,
+        B14007E_020E = B14007E_004E + B14007E_005E + B14007E_006E ##Native Hawaiian and Other Pacific Islander
+         + B14007E_007E + B14007E_008E + B14007E_009E + B14007E_010E
+         + B14007E_011E + B14007E_012E + B14007E_013E + B14007E_014E
+         + B14007E_015E + B14007E_016E,
+        B14007F_020E = B14007F_004E + B14007F_005E + B14007F_006E ##OTHER
+         + B14007F_007E + B14007F_008E + B14007F_009E + B14007F_010E
+         + B14007F_011E + B14007F_012E + B14007F_013E + B14007F_014E
+         + B14007F_015E + B14007F_016E,
+        B14007G_020E = B14007G_004E + B14007G_005E + B14007G_006E ##Two or More Races
+         + B14007G_007E + B14007G_008E + B14007G_009E + B14007G_010E
+         + B14007G_011E + B14007G_012E + B14007G_013E + B14007G_014E
+         + B14007G_015E + B14007G_016E,
+        B14007H_020E = B14007H_004E + B14007H_005E + B14007H_006E ##WHITE
+         + B14007H_007E + B14007H_008E + B14007H_009E + B14007H_010E
+         + B14007H_011E + B14007H_012E + B14007H_013E + B14007H_014E
+         + B14007H_015E + B14007H_016E,
+        B14007I_020E = B14007I_004E + B14007I_005E + B14007I_006E ##LATINO
+         + B14007I_007E + B14007I_008E + B14007I_009E + B14007I_010E
+         + B14007I_011E + B14007I_012E + B14007I_013E + B14007I_014E
+         + B14007I_015E + B14007I_016E) %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values))
+## la county
+temp_edu_enr_race24 %>% filter(NAME == "Los Angeles County, California") %>%
+  ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr64),
+
+
+## ENROLLMENT RATES IN COLLEGE/UNIVERSITIES BY RACE/ETHNICITY (2012-2020)
 
 ### ACS1 - Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
 ```{r temp-edu-enr41, fig.cap= "ACS 1-Year Level Data: College/University Enrollment Rates By Race/Ethnicity in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs1 - education enrollment, state level, (educational enrollment rates of students enrolled in college/universities)
-temp_edu_enr_race30 <- acs1_state_data %>% 
+temp_edu_enr_race16 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -975,17 +1330,18 @@ temp_edu_enr_race30 <- acs1_state_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 # graph, states: CA, TX, FL, NY
-temp_edu_enr_race30 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+temp_edu_enr_race16 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr41),
 
 ### ACS1 - Education Enrollment Rates in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
 ```{r temp-edu-enr42, fig.cap= "ACS 1-Year Level Data: College/University Enrollment Rates By Race/Ethnicity in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
 ## acs1 - education enrollment, metro level, (educational enrollment rates of students enrolled in college/universities)
-temp_edu_enr_race29 <- acs1_metro_data %>% 
+temp_edu_enr_race17 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -1006,51 +1362,55 @@ temp_edu_enr_race29 <- acs1_metro_data %>%
     )) %>% 
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
-# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; Providence-Warwick, RI-MA Metro Area
-temp_edu_enr_race29 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
+# graph
+temp_edu_enr_race17 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr42),
 
-
 ```{r temp-edu-enr43, fig.cap= "ACS 1-Year Level Data: College/University Enrollment Rates By Race/Ethnicity in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
-temp_edu_enr_race29 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
+temp_edu_enr_race17 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr43),
 
 ```{r temp-edu-enr44, fig.cap= "ACS 1-Year Level Data: College/University Enrollment Rates By Race/Ethnicity in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
-temp_edu_enr_race29 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
+temp_edu_enr_race17 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr44),
 
 ```{r temp-edu-enr45, fig.cap= "ACS 1-Year Level Data: College/University Enrollment Rates By Race/Ethnicity in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
-temp_edu_enr_race29 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
+temp_edu_enr_race17 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr45),
 
 ```{r temp-edu-enr46, fig.cap= "ACS 1-Year Level Data: College/University Enrollment Rates By Race/Ethnicity in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
-temp_edu_enr_race29 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
+temp_edu_enr_race17 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr46),
 
 ### ACS1 - Education Enrollment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
 ```{r temp-edu-enr47, fig.cap= "ACS 1-Year Level Data: College/University Enrollment Rates By Race/Ethnicity in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in college/universities)
-temp_edu_enr_race28 <- acs1_county_data %>% 
+temp_edu_enr_race18 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -1072,17 +1432,18 @@ temp_edu_enr_race28 <- acs1_county_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 ## la county
-temp_edu_enr_race28 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas", "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
+temp_edu_enr_race18 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas", "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr47),
 
 ### ACS1 - Education Enrollment Rates in Los Angeles County (2012-2020)
 ```{r temp-edu-enr48, fig.cap= "ACS 1-Year Level Data: College/University Enrollment Rates By Race/Ethnicity in Los Angeles County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in college/universities)
-temp_edu_enr_race28 <- acs1_county_data %>% 
+temp_edu_enr_race18 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -1104,19 +1465,20 @@ temp_edu_enr_race28 <- acs1_county_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 ## counties
-temp_edu_enr_race28 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
+temp_edu_enr_race18 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr48),
 
-### ENROLLMENT RATES IN GRADUATE OR PROFESSIONAL SCHOOL BY RACE/ETHNICITY (2012-2020)
+## ENROLLMENT RATES IN GRADUATE OR PROFESSIONAL SCHOOL BY RACE/ETHNICITY (2012-2020)
 
 ### ACS1 - Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
 ```{r temp-edu-enr49, fig.cap= "ACS 1-Year Level Data: Graduate or Professional School Enrollment Rates By Race/Ethnicity in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs1 - education enrollment, state level, (educational enrollment rates of students enrolled in graduate or professional school)
-temp_edu_enr_race33 <- acs1_state_data %>% 
+temp_edu_enr_race19 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -1138,17 +1500,18 @@ temp_edu_enr_race33 <- acs1_state_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 # graph, states: CA, TX, FL, NY
-temp_edu_enr_race33 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+temp_edu_enr_race19 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr49),
 
 ### ACS1 - Education Enrollment Rates in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
 ```{r temp-edu-enr50, fig.cap= "ACS 1-Year Level Data: Graduate or Professional School Enrollment Rates By Race/Ethnicity in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
 ## acs1 - education enrollment, metro level, (educational enrollment rates of students enrolled in graduate or professional school)
-temp_edu_enr_race32 <- acs1_metro_data %>% 
+temp_edu_enr_race20 <- acs1_metro_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -1169,50 +1532,55 @@ temp_edu_enr_race32 <- acs1_metro_data %>%
     )) %>% 
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
-# graph, metro: Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area
-temp_edu_enr_race32 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
+# graph
+temp_edu_enr_race20 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr50),
 
 ```{r temp-edu-enr51, fig.cap= "ACS 1-Year Level Data: Graduate or Professional School Enrollment Rates By Race/Ethnicity in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
-temp_edu_enr_race32 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
+temp_edu_enr_race20 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr51),
 
 ```{r temp-edu-enr52, fig.cap= "ACS 1-Year Level Data: Graduate or Professional School Enrollment Rates By Race/Ethnicity in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
-temp_edu_enr_race32 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
+temp_edu_enr_race20 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr52),
 
 ```{r temp-edu-enr53, fig.cap= "ACS 1-Year Level Data: Graduate or Professional School Enrollment Rates By Race/Ethnicity in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
-temp_edu_enr_race32 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
+temp_edu_enr_race20 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr53),
 
 ```{r temp-edu-enr54, fig.cap= "ACS 1-Year Level Data: Graduate or Professional School Enrollment Rates By Race/Ethnicity in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
-temp_edu_enr_race32 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
+temp_edu_enr_race20 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr54),
 
 ### ACS1 - Education Enrollment Rates in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
 ```{r temp-edu-enr55, fig.cap= "ACS 1-Year Level Data: Graduate or Professional School Enrollment Rates By Race/Ethnicity in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in graduate or professional school)
-temp_edu_enr_race31 <- acs1_county_data %>% 
+temp_edu_enr_race21 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -1234,18 +1602,19 @@ temp_edu_enr_race31 <- acs1_county_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 ## counties
-temp_edu_enr_race31 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
+temp_edu_enr_race21 %>% filter(NAME %in% c("Los Angeles County, California", "Cook County, Illinois","Maricopa County, Arizona", "Orange County, California", "Bexar County, Texas",
                                            "Riverside County, California", "San Bernardino County, California", "San Diego County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr55),
 
 ### ACS1 - Education Enrollment Rates in Los Angeles County (2012-2020)
 ```{r temp-edu-enr56, fig.cap= "ACS 1-Year Level Data: Graduate or Professional School Enrollment Rates By Race/Ethnicity in Los Angeles County, CA (2012-2020)"}
 ## acs1 - education enrollment, county level, (educational enrollment rates of students enrolled in graduate or professional school)
-temp_edu_enr_race31 <- acs1_county_data %>% 
+temp_edu_enr_race21 <- acs1_county_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
   pivot_longer(
     cols = -c(GEOID, NAME, YEAR),           
@@ -1267,10 +1636,710 @@ temp_edu_enr_race31 <- acs1_county_data %>%
   group_by(GEOID, NAME, YEAR) %>% 
   mutate(pct = values/sum(values))
 ## la county
-temp_edu_enr_race31 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
+temp_edu_enr_race21 %>% filter(NAME %in% c("Los Angeles County, California")) %>%
   ggplot(aes(x = YEAR, y = pct, color = race)) + geom_line() + facet_wrap(~ NAME) +
   xlab('Year') + ylab('Percent') +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr56),
 
+## COMPARISON GROUPS: COLLEGE/UNIVERSITY ENROLLMENT RATES BY RACE/ETHNICITY IN CALIFORNIA, TEXAS, FLORIDA, AND NEW YORK (2012-2020)
+
+### ACS5 - Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
+```{r temp-edu-enr65, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Black Students in California, Texas, Florida, and New York States (2012-2020)"}
+## ACS5 - Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
+acs5_state_comp_data <- acs5_state_data %>% 
+  mutate(pop_white_under5 = B01001H_003E + B01001H_018E,
+         pop_black_under5 = B01001B_003E + B01001B_018E, 
+         pop_asian_under5 = B01001D_003E + B01001D_018E,
+         pop_amerindian_under5 = B01001C_003E + B01001C_018E,
+         pop_nativehawaii_under5 = B01001E_003E + B01001E_018E,
+         pop_otherrace_under5 = B01001F_003E + B01001F_018E,
+         pop_tworaces_under5 = B01001G_003E + B01001G_018E,
+         pop_latino_under5 = B01001I_003E + B01001I_018E,
+         ##pop_total_under5 = pop_white_under5 + pop_black_under5 + pop_asian_under5 + pop_amerindian_under5 + pop_nativehawaii_under5 + pop_otherrace_under5 + pop_tworaces_under5 + pop_latino_under5,
+         
+         pop_white_5_17 = B01001H_004E + B01001H_005E + B01001H_006E + B01001H_019E + B01001H_020E + B01001H_021E,
+         pop_black_5_17 = B01001B_004E + B01001B_005E + B01001B_006E + B01001B_019E + B01001B_020E + B01001B_021E,
+         pop_asian_5_17 = B01001D_004E + B01001D_005E + B01001D_006E + B01001D_019E + B01001D_020E + B01001D_021E,
+         pop_amerindian_5_17 = B01001C_004E + B01001C_005E + B01001C_006E + B01001C_019E + B01001C_020E + B01001C_021E,
+         pop_nativehawaii_5_17 = B01001E_004E + B01001E_005E + B01001E_006E + B01001E_019E + B01001E_020E + B01001E_021E,
+         pop_otherrace_5_17 = B01001F_004E + B01001F_005E + B01001F_006E + B01001F_019E + B01001F_020E + B01001F_021E,
+         pop_tworaces_5_17 = B01001G_004E + B01001G_005E + B01001G_006E + B01001G_019E + B01001G_020E + B01001G_021E,
+         pop_latino_5_17 = B01001I_004E + B01001I_005E + B01001I_006E + B01001I_019E + B01001I_020E + B01001I_021E,
+         ##pop_total_5_17 = pop_white_5_17 + pop_black_5_17 + pop_asian_5_17 + pop_amerindian_5_17 + pop_nativehawaii_5_17 + pop_otherrace_5_17 + pop_tworaces_5_17 + pop_latino_5_17,
+         
+         pop_white_18_24 = B01001H_007E + B01001H_008E + B01001H_022E + B01001H_023E,
+         pop_black_18_24 = B01001B_007E + B01001B_008E + B01001B_022E + B01001B_023E,
+         pop_asian_18_24 = B01001D_007E + B01001D_008E + B01001D_022E + B01001D_023E,
+         pop_amerindian_18_24 = B01001C_007E + B01001C_008E + B01001C_022E + B01001C_023E,
+         pop_nativehawaii_18_24 = B01001E_007E + B01001E_008E + B01001E_022E + B01001E_023E,
+         pop_otherrace_18_24 = B01001F_007E + B01001F_008E + B01001F_022E + B01001F_023E,
+         pop_tworaces_18_24 = B01001G_007E + B01001G_008E + B01001G_022E + B01001G_023E,
+         pop_latino_18_24 = B01001I_007E + B01001I_008E + B01001I_022E + B01001I_023E,
+         ##pop_total_18_24 = pop_white_18_24 + pop_black_18_24 + pop_asian_18_24 + pop_amerindian_18_24 + pop_nativehawaii_18_24 + pop_otherrace_18_24 + pop_tworaces_18_24 + pop_latino_18_24, 
+         
+         pop_white_25plus = B01001H_001E - (pop_white_under5 + pop_white_5_17 + pop_white_18_24),
+         pop_black_25plus = B01001B_001E - (pop_black_under5 + pop_black_5_17 + pop_black_18_24),
+         pop_asian_25plus = B01001D_001E - (pop_asian_under5 + pop_asian_5_17 + pop_asian_18_24),
+         pop_amerindian_25plus = B01001C_001E - (pop_amerindian_under5 + pop_amerindian_5_17 + pop_amerindian_18_24),
+         pop_nativehawaii_25plus = B01001E_001E - (pop_nativehawaii_under5 + pop_nativehawaii_5_17 + pop_nativehawaii_18_24),
+         pop_otherrace_25plus = B01001F_001E - (pop_otherrace_under5 + pop_otherrace_5_17 + pop_otherrace_18_24),
+         pop_tworaces_25plus = B01001G_001E - (pop_tworaces_under5 + pop_tworaces_5_17 + pop_tworaces_18_24),
+         pop_latino_25plus = B01001I_001E - (pop_latino_under5 + pop_latino_5_17 + pop_latino_18_24)) %>% 
+        ## pop_total_25plus = pop_white_25plus + pop_black_25plus + pop_asian_25plus + pop_amerindian_25plus + pop_nativehawaii_25plus + pop_otherrace_25plus + pop_tworaces_25plus + pop_latino_25plus)
+  select(GEOID, NAME, YEAR, starts_with('pop_')) %>%
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),
+    names_prefix = 'pop_',
+    names_pattern = '([a-z]+)_(.+)',
+    names_to = c('race', 'age'),
+    values_to = 'count'
+  ) %>%
+  group_by(GEOID, NAME, YEAR, age) %>%
+  mutate(pct = count/sum(count)) %>%
+  ungroup()
+
+## black enrollment in colleges/universities, state level
+temp_edu_enr_race43 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Black", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '18_24', race == 'black') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race43) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr65), the graphs depict the college/university enrollment rates of Black students (ages 18 to 24) in comparison to the Black population in California, Texas, Florida, and New York States. Overall, it seems like there is a higher percent of Black students enrolled in college/university in comparison to the Black population in California, New York, and Texas.
+
+
+```{r temp-edu-enr66, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of American Indian and Alaska Native Students in California, Texas, Florida, and New York States (2012-2020)"}
+## American Indian and Alaska Native enrollment in colleges/universities, state level
+temp_edu_enr_race44 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "American Indian and Alaska Native", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '18_24', race == 'amerindian') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race44) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr66), the graphs depict the college/university enrollment rates of American Indian and Alaska Native students (ages 18 to 24) in comparison to the American Indian and Alaska Native population in California, Texas, Florida, and New York States. Overall, it seems like there are less American Indian and Alaska Native students enrolled in college/university in comparison to the American Indian and Alaska Native population in California, Florida, New York, and Texas.
+
+
+```{r temp-edu-enr67, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Asian Students in California, Texas, Florida, and New York States (2012-2020)"}
+## Asian enrollment in colleges/universities, state level
+temp_edu_enr_race45 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Asian", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '18_24', race == 'asian') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race45) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr67), the graphs depict the college/university enrollment rates of Asian students (ages 18 to 24) in comparison to the Asian population in California, Texas, Florida, and New York States. In California and New York, there are more Asian students enrolled in college/university in comparison to the Asian population in those states. In Florida and Texas, there is also a higher percent of Asian students enrolled in college/university in in comparison to the Asian population. However, there is a lower percentage of Asian students enrolled in college/university in Florida and Texas in comparison to the Asian students enrolled in California and New York.   
+
+```{r temp-edu-enr68, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Native Hawaiian and Other Pacific Islander Students in California, Texas, Florida, and New York States (2012-2020)"}
+## Native Hawaiian and Other Pacific Islander enrollment in colleges/universities, state level
+temp_edu_enr_race46 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Native Hawaiian and Other Pacific Islander", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '18_24', race == 'nativehawaii') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race46) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr68), the graphs depict the college/university enrollment rates of Native Hawaiian and Other Pacific Islander students (ages 18 to 24) in comparison to the Native Hawaiian and Other Pacific Islander population in California, Texas, Florida, and New York States. Overall, it seems like there is not enough information/data on this population group, which means that these graphs may not portray an accurate representation of the number of Native Hawaiian and Other Pacific Islander students enrolled in college/university.
+
+```{r temp-edu-enr69, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Students who were of Other Races in California, Texas, Florida, and New York States (2012-2020)"}
+## Other enrollment in colleges/universities, state level
+temp_edu_enr_race47 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Other", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '18_24', race == 'otherrace') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race47) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr69), the graphs depict the college/university enrollment rates of students who were of other races (ages 18 to 24) in comparison to the population of students who were of other races in California, Texas, Florida, and New York States. In California, there seems to be an upward trend in the percent of students enrolled in college/university, which is proportionate to the increase in size of the population group. On the other hand, the percent of students enrolled in college/university in New York, Florida, and Texas is lower in comparison to its population size and California.   
+
+```{r temp-edu-enr70, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Students who were of Two or More Races in California, Texas, Florida, and New York States (2012-2020)"}
+## Two or More Races enrollment in colleges/universities, state level
+temp_edu_enr_race48 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Two or More Races", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '18_24', race == 'tworaces') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race48) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr70), the graphs depict the college/university enrollment rates of students who were of two or more races (ages 18 to 24) in comparison to the population of students who were of two or more races in California, Texas, Florida, and New York States. 
+
+
+```{r temp-edu-enr71, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of White Students in California, Texas, Florida, and New York States (2012-2020)"}
+## white enrollment in colleges/universities, state level
+temp_edu_enr_race49 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "white", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '18_24', race == 'white') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race49) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr71), the graphs depict the college/university enrollment rates of white students (ages 18 to 24) in comparison to the white population in California, Texas, Florida, and New York States. Overall, the percent of white students enrolled in college/university is higher than the white population in California, New York, Florida, and Texas.
+
+
+```{r temp-edu-enr72, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Latinx Students in California, Texas, Florida, and New York States (2012-2020)"}
+## latino enrollment in colleges/universities, state level
+temp_edu_enr_race50 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_017E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_017E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_017E" = "Black", 
+      "B14007C_017E" = "American Indian and Alaska Native",
+      "B14007D_017E" = "Asian",
+      "B14007E_017E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_017E" = "Other",
+      "B14007G_017E" = "Two or More Races",
+      "B14007H_017E" = "white",
+      "B14007I_017E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Latino", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '18_24', race == 'latino') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race50) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr72), the graphs depict the college/university enrollment rates of Latinx students (ages 18 to 24) in comparison to the Latinx population in California, Texas, Florida, and New York States. Overall, it seems like there is an upward trend in the percent of Latinx students enrolled in college/university and the percent of Latinx students enrolled in college/university is lower than the Latinx population in California, New York, Florida, and Texas.
+
+
+## COMPARISON GROUPS: GRADUATE OR PROFESSIONAL SCHOOL ENROLLMENT RATES BY RACE/ETHNICITY IN CALIFORNIA, TEXAS, FLORIDA, AND NEW YORK (2012-2020)
+
+### ACS5 - Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
+```{r temp-edu-enr73, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Black Students in California, Texas, Florida, and New York States (2012-2020)"}
+## ACS5 - Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
+acs5_state_comp_data <- acs5_state_data %>% 
+  mutate(pop_white_under5 = B01001H_003E + B01001H_018E,
+         pop_black_under5 = B01001B_003E + B01001B_018E, 
+         pop_asian_under5 = B01001D_003E + B01001D_018E,
+         pop_amerindian_under5 = B01001C_003E + B01001C_018E,
+         pop_nativehawaii_under5 = B01001E_003E + B01001E_018E,
+         pop_otherrace_under5 = B01001F_003E + B01001F_018E,
+         pop_tworaces_under5 = B01001G_003E + B01001G_018E,
+         pop_latino_under5 = B01001I_003E + B01001I_018E,
+         ##pop_total_under5 = pop_white_under5 + pop_black_under5 + pop_asian_under5 + pop_amerindian_under5 + pop_nativehawaii_under5 + pop_otherrace_under5 + pop_tworaces_under5 + pop_latino_under5,
+         
+         pop_white_5_17 = B01001H_004E + B01001H_005E + B01001H_006E + B01001H_019E + B01001H_020E + B01001H_021E,
+         pop_black_5_17 = B01001B_004E + B01001B_005E + B01001B_006E + B01001B_019E + B01001B_020E + B01001B_021E,
+         pop_asian_5_17 = B01001D_004E + B01001D_005E + B01001D_006E + B01001D_019E + B01001D_020E + B01001D_021E,
+         pop_amerindian_5_17 = B01001C_004E + B01001C_005E + B01001C_006E + B01001C_019E + B01001C_020E + B01001C_021E,
+         pop_nativehawaii_5_17 = B01001E_004E + B01001E_005E + B01001E_006E + B01001E_019E + B01001E_020E + B01001E_021E,
+         pop_otherrace_5_17 = B01001F_004E + B01001F_005E + B01001F_006E + B01001F_019E + B01001F_020E + B01001F_021E,
+         pop_tworaces_5_17 = B01001G_004E + B01001G_005E + B01001G_006E + B01001G_019E + B01001G_020E + B01001G_021E,
+         pop_latino_5_17 = B01001I_004E + B01001I_005E + B01001I_006E + B01001I_019E + B01001I_020E + B01001I_021E,
+         ##pop_total_5_17 = pop_white_5_17 + pop_black_5_17 + pop_asian_5_17 + pop_amerindian_5_17 + pop_nativehawaii_5_17 + pop_otherrace_5_17 + pop_tworaces_5_17 + pop_latino_5_17,
+         
+         pop_white_18_24 = B01001H_007E + B01001H_008E + B01001H_022E + B01001H_023E,
+         pop_black_18_24 = B01001B_007E + B01001B_008E + B01001B_022E + B01001B_023E,
+         pop_asian_18_24 = B01001D_007E + B01001D_008E + B01001D_022E + B01001D_023E,
+         pop_amerindian_18_24 = B01001C_007E + B01001C_008E + B01001C_022E + B01001C_023E,
+         pop_nativehawaii_18_24 = B01001E_007E + B01001E_008E + B01001E_022E + B01001E_023E,
+         pop_otherrace_18_24 = B01001F_007E + B01001F_008E + B01001F_022E + B01001F_023E,
+         pop_tworaces_18_24 = B01001G_007E + B01001G_008E + B01001G_022E + B01001G_023E,
+         pop_latino_18_24 = B01001I_007E + B01001I_008E + B01001I_022E + B01001I_023E,
+         ##pop_total_18_24 = pop_white_18_24 + pop_black_18_24 + pop_asian_18_24 + pop_amerindian_18_24 + pop_nativehawaii_18_24 + pop_otherrace_18_24 + pop_tworaces_18_24 + pop_latino_18_24, 
+         
+         pop_white_25plus = B01001H_001E - (pop_white_under5 + pop_white_5_17 + pop_white_18_24),
+         pop_black_25plus = B01001B_001E - (pop_black_under5 + pop_black_5_17 + pop_black_18_24),
+         pop_asian_25plus = B01001D_001E - (pop_asian_under5 + pop_asian_5_17 + pop_asian_18_24),
+         pop_amerindian_25plus = B01001C_001E - (pop_amerindian_under5 + pop_amerindian_5_17 + pop_amerindian_18_24),
+         pop_nativehawaii_25plus = B01001E_001E - (pop_nativehawaii_under5 + pop_nativehawaii_5_17 + pop_nativehawaii_18_24),
+         pop_otherrace_25plus = B01001F_001E - (pop_otherrace_under5 + pop_otherrace_5_17 + pop_otherrace_18_24),
+         pop_tworaces_25plus = B01001G_001E - (pop_tworaces_under5 + pop_tworaces_5_17 + pop_tworaces_18_24),
+         pop_latino_25plus = B01001I_001E - (pop_latino_under5 + pop_latino_5_17 + pop_latino_18_24)) %>% 
+  ## pop_total_25plus = pop_white_25plus + pop_black_25plus + pop_asian_25plus + pop_amerindian_25plus + pop_nativehawaii_25plus + pop_otherrace_25plus + pop_tworaces_25plus + pop_latino_25plus)
+  select(GEOID, NAME, YEAR, starts_with('pop_')) %>%
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),
+    names_prefix = 'pop_',
+    names_pattern = '([a-z]+)_(.+)',
+    names_to = c('race', 'age'),
+    values_to = 'count'
+  ) %>%
+  group_by(GEOID, NAME, YEAR, age) %>%
+  mutate(pct = count/sum(count)) %>%
+  ungroup()
+
+## black enrollment
+temp_edu_enr_race51 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Black", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '25plus', race == 'black') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race51) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr73), the graphs depict the graduate or professional school enrollment rates of Black students (ages 18 to 24) in comparison to the Black population in California, Texas, Florida, and New York. Overall, it seems like there are more Black students enrolled in graduate or professional school in comparison to the Black population in in California, Texas, Florida, and New York.
+
+
+```{r temp-edu-enr74, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of American Indian and Alaska Native Students in California, Texas, Florida, and New York States (2012-2020)"}
+## American Indian and Alaska Native enrollment 
+temp_edu_enr_race52 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "American Indian and Alaska Native", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '25plus', race == 'amerindian') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race52) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr74), the graphs depict the graduate or professional school enrollment rates of American Indian and Alaska Native students (ages 18 to 24) in comparison to the American Indian and Alaska Native population in California, Texas, Florida, and New York. Overall, it seems like there is a low percentage of American Indian and Alaska Native students enrolled in graduate or professional school in comparison to the Alaska Native population in California, Texas, Florida, and New York.
+
+
+```{r temp-edu-enr75, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Asian Students in California, Texas, Florida, and New York States (2012-2020)"}
+## Asian enrollment 
+temp_edu_enr_race53 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Asian", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '25plus', race == 'asian') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race53) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr75), the graphs depict the graduate or professional school enrollment rates of Asian students (ages 18 to 24) in comparison to the Asian population in California, Texas, Florida, and New York. In all the states, it seems like there is a higher percent of Asian students enrolled in graduate or professional school in comparison to the Asian population, but there is a higher enrollment in graduate or professional school in California.
+
+
+```{r temp-edu-enr76, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Native Hawaiian and Other Pacific Islander Students in California, Texas, Florida, and New York States (2012-2020)"}
+## Native Hawaiian and Other Pacific Islander enrollment 
+temp_edu_enr_race54 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Native Hawaiian and Other Pacific Islander", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '25plus', race == 'nativehawaii') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race54) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr76), the graphs depict the graduate or professional school enrollment rates of Native Hawaiian and Other Pacific Islander students (ages 18 to 24) in comparison to the Native Hawaiian and Other Pacific Islander population in California, Texas, Florida, and New York. 
+
+
+```{r temp-edu-enr77, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Students who were of Other Races in California, Texas, Florida, and New York States (2012-2020)"}
+## Other enrollment 
+temp_edu_enr_race55 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Other", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '25plus', race == 'otherrace') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race55) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr77), the graphs depict the graduate or professional school enrollment rates of students who are of other races (ages 18 to 24) in comparison to the population of students who are of other races in California, Texas, Florida, and New York. In Florida, it seems like the number of students enrolled and the population of students who are of other races were almost the same.
+
+
+```{r temp-edu-enr78, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Students who were of Two or More Races in California, Texas, Florida, and New York States (2012-2020)"}
+## Two or More Races enrollment in colleges/universities, state level
+temp_edu_enr_race56 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Two or More Races", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '25plus', race == 'tworaces') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race56) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr78), the graphs depict the graduate or professional school enrollment rates of students who were of two or more races (ages 18 to 24) in comparison to the population of students who were of two or more races in California, Texas, Florida, and New York.
+
+
+```{r temp-edu-enr79, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of White Students in California, Texas, Florida, and New York States (2012-2020)"}
+## white enrollment in colleges/universities, state level
+temp_edu_enr_race57 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "white", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '25plus', race == 'white') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race57) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr79), the graphs depict the graduate or professional school enrollment rates of white students (ages 18 to 24) in comparison to the population of white students in California, Texas, Florida, and New York. In Florida, there is a low percent of white students who are enrolled in graduate or professional school in comparison to the white population in California, Texas, Florida, and New York. 
+
+
+```{r temp-edu-enr80, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Latinx Students in California, Texas, Florida, and New York States (2012-2020)"}
+## latino enrollment in colleges/universities, state level
+temp_edu_enr_race58 <- acs5_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("B14007\\w_018E")) %>% ## this number can change to any enrollment level preferred
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'race',         
+    values_to = 'values') %>%
+  filter(race != "B14007A_018E") %>%
+  mutate(
+    values = if_else(is.na(values), 0, values),
+    race = recode_factor(
+      race,  "B14007B_018E" = "Black", 
+      "B14007C_018E" = "American Indian and Alaska Native",
+      "B14007D_018E" = "Asian",
+      "B14007E_018E" = "Native Hawaiian and Other Pacific Islander",
+      "B14007F_018E" = "Other",
+      "B14007G_018E" = "Two or More Races",
+      "B14007H_018E" = "white",
+      "B14007I_018E" = "Latino"
+    )) %>% 
+  group_by(GEOID, NAME, YEAR) %>% 
+  mutate(pct = values/sum(values), group_type = 'enrolled') %>% 
+  filter(race== "Latino", NAME %in% c('California', 'Florida', 'New York', 'Texas')) %>%
+  select(-values)
+##graph
+acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York', 'Texas'), age == '25plus', race == 'latino') %>%
+  mutate(group_type = 'population') %>% select(GEOID, NAME, YEAR, race, pct, group_type) %>% 
+  bind_rows(temp_edu_enr_race58) %>%
+  ggplot(aes(x = YEAR, y = pct, color = group_type)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-enr80), the graphs depict the graduate or professional school enrollment rates of Latinx students (ages 18 to 24) in comparison to the population of Latinx students in California, Texas, Florida, and New York. In California, there is a low percent of Latinx students who are enrolled in graduate or professional school in comparison to the percent of Latinx students; there is also a large gap between the percent of Latinx students enrolled in graduate or professional school and the Latinx population. 
