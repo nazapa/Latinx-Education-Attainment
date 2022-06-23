@@ -1,7 +1,7 @@
 ---
 title: "Latinx Education Attainment and Enrollment Rates (2012-2020) Using the American Community Survey (ACS)"
 author: "Paula Nazario, Monica Salinas Policy Fellow at the Latino Policy & Politics Institute (LPPI)"
-date: "June 20, 2022"
+date: "June 23, 2022"
 output: 
   bookdown::html_document2: 
     toc: true
@@ -353,6 +353,7 @@ temp_edu_enr_race19 %>% filter(NAME %in% c("California", "Texas", "Florida", "Ne
 ```
 In Figure \@ref(fig:temp-edu-enr49),
 
+
 ## COMPARISON GROUPS: COLLEGE/UNIVERSITY ENROLLMENT RATES BY RACE/ETHNICITY IN CALIFORNIA, TEXAS, FLORIDA, AND NEW YORK (2012-2020)
 
 ### ACS5 - Education Enrollment Rates in California, Texas, Florida, and New York States (2012-2020)
@@ -443,7 +444,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr65),
+In Figure \@ref(fig:temp-edu-enr65), the graphs depict the college/university enrollment rates of Black students (ages 18 to 24) in comparison to the Black population in California, Texas, Florida, and New York States. Overall, it seems like there is a higher percent of Black students enrolled in college/university in comparison to the Black population in California, New York, and Texas.
 
 
 ```{r temp-edu-enr66, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of American Indian and Alaska Native Students in California, Texas, Florida, and New York States (2012-2020)"}
@@ -480,7 +481,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr66),
+In Figure \@ref(fig:temp-edu-enr66), the graphs depict the college/university enrollment rates of American Indian and Alaska Native students (ages 18 to 24) in comparison to the American Indian and Alaska Native population in California, Texas, Florida, and New York States. Overall, it seems like there are less American Indian and Alaska Native students enrolled in college/university in comparison to the American Indian and Alaska Native population in California, Florida, New York, and Texas.
 
 
 ```{r temp-edu-enr67, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Asian Students in California, Texas, Florida, and New York States (2012-2020)"}
@@ -517,7 +518,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr67),
+In Figure \@ref(fig:temp-edu-enr67), the graphs depict the college/university enrollment rates of Asian students (ages 18 to 24) in comparison to the Asian population in California, Texas, Florida, and New York States. In California and New York, there are more Asian students enrolled in college/university in comparison to the Asian population in those states. In Florida and Texas, there is also a higher percent of Asian students enrolled in college/university in in comparison to the Asian population. However, there is a lower percentage of Asian students enrolled in college/university in Florida and Texas in comparison to the Asian students enrolled in California and New York.   
 
 ```{r temp-edu-enr68, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Native Hawaiian and Other Pacific Islander Students in California, Texas, Florida, and New York States (2012-2020)"}
 ## Native Hawaiian and Other Pacific Islander enrollment in colleges/universities, state level
@@ -553,7 +554,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr68),
+In Figure \@ref(fig:temp-edu-enr68), the graphs depict the college/university enrollment rates of Native Hawaiian and Other Pacific Islander students (ages 18 to 24) in comparison to the Native Hawaiian and Other Pacific Islander population in California, Texas, Florida, and New York States. Overall, it seems like there is not enough information/data on this population group, which means that these graphs may not portray an accurate representation of the number of Native Hawaiian and Other Pacific Islander students enrolled in college/university.
 
 ```{r temp-edu-enr69, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Students who were of Other Races in California, Texas, Florida, and New York States (2012-2020)"}
 ## Other enrollment in colleges/universities, state level
@@ -589,8 +590,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr69),
-
+In Figure \@ref(fig:temp-edu-enr69), the graphs depict the college/university enrollment rates of students who were of other races (ages 18 to 24) in comparison to the population of students who were of other races in California, Texas, Florida, and New York States. In California, there seems to be an upward trend in the percent of students enrolled in college/university, which is proportionate to the increase in size of the population group. On the other hand, the percent of students enrolled in college/university in New York, Florida, and Texas is lower in comparison to its population size and California.   
 
 ```{r temp-edu-enr70, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Students who were of Two or More Races in California, Texas, Florida, and New York States (2012-2020)"}
 ## Two or More Races enrollment in colleges/universities, state level
@@ -626,7 +626,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr70),
+In Figure \@ref(fig:temp-edu-enr70), the graphs depict the college/university enrollment rates of students who were of two or more races (ages 18 to 24) in comparison to the population of students who were of two or more races in California, Texas, Florida, and New York States. 
 
 
 ```{r temp-edu-enr71, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of White Students in California, Texas, Florida, and New York States (2012-2020)"}
@@ -663,7 +663,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr71),
+In Figure \@ref(fig:temp-edu-enr71), the graphs depict the college/university enrollment rates of white students (ages 18 to 24) in comparison to the white population in California, Texas, Florida, and New York States. Overall, the percent of white students enrolled in college/university is higher than the white population in California, New York, Florida, and Texas.
 
 
 ```{r temp-edu-enr72, fig.cap= "ACS 5-Year Level Data: College/University Enrollment Rates of Latinx Students in California, Texas, Florida, and New York States (2012-2020)"}
@@ -700,7 +700,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr72),
+In Figure \@ref(fig:temp-edu-enr72), the graphs depict the college/university enrollment rates of Latinx students (ages 18 to 24) in comparison to the Latinx population in California, Texas, Florida, and New York States. Overall, it seems like there is an upward trend in the percent of Latinx students enrolled in college/university and the percent of Latinx students enrolled in college/university is lower than the Latinx population in California, New York, Florida, and Texas.
 
 
 ## COMPARISON GROUPS: GRADUATE OR PROFESSIONAL SCHOOL ENROLLMENT RATES BY RACE/ETHNICITY IN CALIFORNIA, TEXAS, FLORIDA, AND NEW YORK (2012-2020)
@@ -793,7 +793,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr73),
+In Figure \@ref(fig:temp-edu-enr73), the graphs depict the graduate or professional school enrollment rates of Black students (ages 18 to 24) in comparison to the Black population in California, Texas, Florida, and New York. Overall, it seems like there are more Black students enrolled in graduate or professional school in comparison to the Black population in in California, Texas, Florida, and New York.
 
 
 ```{r temp-edu-enr74, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of American Indian and Alaska Native Students in California, Texas, Florida, and New York States (2012-2020)"}
@@ -830,7 +830,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr74),
+In Figure \@ref(fig:temp-edu-enr74), the graphs depict the graduate or professional school enrollment rates of American Indian and Alaska Native students (ages 18 to 24) in comparison to the American Indian and Alaska Native population in California, Texas, Florida, and New York. Overall, it seems like there is a low percentage of American Indian and Alaska Native students enrolled in graduate or professional school in comparison to the Alaska Native population in California, Texas, Florida, and New York.
 
 
 ```{r temp-edu-enr75, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Asian Students in California, Texas, Florida, and New York States (2012-2020)"}
@@ -867,7 +867,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr75),
+In Figure \@ref(fig:temp-edu-enr75), the graphs depict the graduate or professional school enrollment rates of Asian students (ages 18 to 24) in comparison to the Asian population in California, Texas, Florida, and New York. In all the states, it seems like there is a higher percent of Asian students enrolled in graduate or professional school in comparison to the Asian population, but there is a higher enrollment in graduate or professional school in California.
 
 
 ```{r temp-edu-enr76, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Native Hawaiian and Other Pacific Islander Students in California, Texas, Florida, and New York States (2012-2020)"}
@@ -904,7 +904,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr76),
+In Figure \@ref(fig:temp-edu-enr76), the graphs depict the graduate or professional school enrollment rates of Native Hawaiian and Other Pacific Islander students (ages 18 to 24) in comparison to the Native Hawaiian and Other Pacific Islander population in California, Texas, Florida, and New York. 
 
 
 ```{r temp-edu-enr77, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Students who were of Other Races in California, Texas, Florida, and New York States (2012-2020)"}
@@ -941,7 +941,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr77),
+In Figure \@ref(fig:temp-edu-enr77), the graphs depict the graduate or professional school enrollment rates of students who are of other races (ages 18 to 24) in comparison to the population of students who are of other races in California, Texas, Florida, and New York. In Florida, it seems like the number of students enrolled and the population of students who are of other races were almost the same.
 
 
 ```{r temp-edu-enr78, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Students who were of Two or More Races in California, Texas, Florida, and New York States (2012-2020)"}
@@ -978,7 +978,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr78),
+In Figure \@ref(fig:temp-edu-enr78), the graphs depict the graduate or professional school enrollment rates of students who were of two or more races (ages 18 to 24) in comparison to the population of students who were of two or more races in California, Texas, Florida, and New York.
 
 
 ```{r temp-edu-enr79, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of White Students in California, Texas, Florida, and New York States (2012-2020)"}
@@ -1015,7 +1015,7 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr79),
+In Figure \@ref(fig:temp-edu-enr79), the graphs depict the graduate or professional school enrollment rates of white students (ages 18 to 24) in comparison to the population of white students in California, Texas, Florida, and New York. In Florida, there is a low percent of white students who are enrolled in graduate or professional school in comparison to the white population in California, Texas, Florida, and New York. 
 
 
 ```{r temp-edu-enr80, fig.cap= "ACS 5-Year Level Data: Graduate or Professional School Enrollment Rates of Latinx Students in California, Texas, Florida, and New York States (2012-2020)"}
@@ -1052,4 +1052,4 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr80),
+In Figure \@ref(fig:temp-edu-enr80), the graphs depict the graduate or professional school enrollment rates of Latinx students (ages 18 to 24) in comparison to the population of Latinx students in California, Texas, Florida, and New York. In California, there is a low percent of Latinx students who are enrolled in graduate or professional school in comparison to the percent of Latinx students; there is also a large gap between the percent of Latinx students enrolled in graduate or professional school and the Latinx population. 
