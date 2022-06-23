@@ -1,7 +1,7 @@
 ---
 title: "Latinx Education Attainment and Enrollment Rates (2012-2020) Using the American Community Survey (ACS)"
 author: "Paula Nazario, MPP Student at the UCLA Luskin School of Public Affairs"
-date: "June 22, 2022"
+date: "June 23, 2022"
 output: 
   bookdown::html_document2:
     toc: true
