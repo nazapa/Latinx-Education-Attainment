@@ -7,6 +7,8 @@ bibliography: references.bib
 output: 
   bookdown::html_document2:
     toc: true
+    toc_float: true
+    theme: united
     toc_depth: 2
     number_sections: false
     link-citations: yes
@@ -38,6 +40,9 @@ theme_set(
   )
 )
 ```
+
+## ACKNOWLEDGEMENTS
+I would like to thank Professor Ozan Jaquette and Crystal Han for their support and assistance for making this research project/product possible. 
 
 ## RESEARCH QUESTIONS
 1. How has the educational attainment rates for Latinx students changed in the past 8 years (e.g., 2012-2020) in areas that are highly populated by Latinx communities?
@@ -2345,3 +2350,6 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
 In Figure \@ref(fig:temp-edu-enr80), the graphs depict the graduate or professional school enrollment rates of Latinx students (ages 18 to 24) in comparison to the population of Latinx students in California, Texas, Florida, and New York. In California, there is a low percent of Latinx students who are enrolled in graduate or professional school in comparison to the percent of Latinx students; there is also a large gap between the percent of Latinx students enrolled in graduate or professional school and the Latinx population. 
 
 ## REFERENCES
+```{r}
+
+```

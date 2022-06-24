@@ -2,13 +2,15 @@
 title: "Latinx Education Attainment and Enrollment Rates (2012-2020) Using the American Community Survey (ACS)"
 author: "Paula Nazario, Monica Salinas Policy Fellow at the Latino Policy & Politics Institute (LPPI)"
 date: "June 23, 2022"
+csl: apa.csl
+bibliography: references.bib
 output: 
-  bookdown::html_document2: 
+  bookdown::html_document2:
     toc: true
+    toc_float: true
+    theme: united
     toc_depth: 2
     number_sections: false
-    bibliography: references.bib
-    csl: asm.csl
     link-citations: yes
 ---
 
@@ -38,6 +40,9 @@ theme_set(
   )
 )
 ```
+
+## ACKNOWLEDGEMENTS
+I would like to thank Professor Ozan Jaquette and Crystal Han for their support and assistance for making this research project/product possible. 
 
 ## RESEARCH QUESTIONS
 1. How has the educational attainment rates for Latinx students changed in the past 8 years (e.g., 2012-2020) in areas that are highly populated by Latinx communities?
