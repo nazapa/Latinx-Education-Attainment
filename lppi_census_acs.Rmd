@@ -51,31 +51,68 @@ I would like to thank Professor Ozan Jaquette and Crystal Han for their support 
 2. How has the educational enrollment rates for Latinx students changed in the past 8 years (e.g., 2012-2020) in areas that are highly populated by Latinx communities?
     a. How has the educational enrollment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the state level?
 
-## LATINX STUDENT EDUCATIONAL OUTCOMES
-Latino students are expected to increase by 25% by 2030 (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). Now more than ever, it is important to create policies and programs that increase higher education completion rates of Latino students to put them on the pathway for shared economic prosperity (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf).  A college graduate with a bachelor’s degree is 24% more likely to be employed and earn about $32,000 annually and $1 million higher over a lifetime (https://www.aplu.org/our-work/5-archived-projects/college-costs-tuition-and-financial-aid/publicuvalues/societal-benefits.html). In 2019, the average median income for recent college graduates with a bachelor’s degree was about $44,000 per year, in comparison to high school graduates who had an average median income earning of about $33,000 per year (https://www.aplu.org/our-work/5-archived-projects/college-costs-tuition-and-financial-aid/publicuvalues/societal-benefits.html). Those who obtain a bachelor’s degree are more than twice as likely to volunteer, contribute about 3.5 times more money to charity, and 75% vote in presidential elections. College graduates are also less likely to rely on government assistance programs such as medicaid, housing subsidies, nutrition assistance, unemployment benefits, etc (https://www.aplu.org/our-work/5-archived-projects/college-costs-tuition-and-financial-aid/publicuvalues/societal-benefits.html). Furthermore, college graduates are 3.5 times less likely to be impoverished and about 5 times less likely to be in prison. It is evident that there are many benefits for students to pursue a higher education degree, which means that these opportunities can be even greater for Latino students.
+## SUMMARY OF FINDINGS
+In every county that is heavily populated by Latinx folks, the percent of students with a bachelor's degree or higher has increased over the last 10 years. Across all the counties analyzed, the percent of Latina educational levels (bachelor's degree or higher) are greater than it is for Latinos. In terms of Nativity/Legal status over time in the United States, Latinos in FL and NY have higher educational attainment, but they are more likely to be citizens or descended from citizens (e.g., Cubans in FL, Puerto Ricans in NY, etc.). In contrast, TX and CA tend to have more non-citizen Latinos and first-generation students (e.g., Mexicans, Central Americans, etc.).
+
+## BACKGROUND: LATINX STUDENT EDUCATIONAL OUTCOMES
+Latino students are expected to increase by 25% by 2030 [@ExcelenciainEducation]. Now more than ever, it is important to create policies and programs that increase higher education completion rates of Latino students to put them on the pathway for shared economic prosperity [@ExcelenciainEducation].  A college graduate with a bachelor’s degree is 24% more likely to be employed and earn about $32,000 annually and $1 million higher over a lifetime [@AssociationofPublicandLand-GrantUniversities]. In 2019, the average median income for recent college graduates with a bachelor’s degree was about $44,000 per year, in comparison to high school graduates who had an average median income earning of about $33,000 per year [@AssociationofPublicandLand-GrantUniversities]. Those who obtain a bachelor’s degree are more than twice as likely to volunteer, contribute about 3.5 times more money to charity, and 75% vote in presidential elections. College graduates are also less likely to rely on government assistance programs such as medicaid, housing subsidies, nutrition assistance, unemployment benefits, etc [@AssociationofPublicandLand-GrantUniversities]. Furthermore, college graduates are 3.5 times less likely to be impoverished and about 5 times less likely to be in prison. It is evident that there are many benefits for students to pursue a higher education degree, which means that these opportunities can be even greater for Latino students.
 
 Latino Students & Higher Education Completion Rates:
 
-While pursuing higher education has many positive externalities in our society, Latino students are lagging behind the rest of their peers in terms of college completion rates. According to Excelencia in Education, Latinos need to earn 6.2 million degrees by 2020 in order for the U.S. to be the top ranked in the world for college degree attainment (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). In the U.S., 21% of Latino students ages 18 to 34 were enrolled in higher education in comparison to 24% of their white non-Latino peers (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). In terms of degree attainment, 24% of Latino adults who were 25 years of age or older earned an associate’s degree or higher, in comparson to 46% of white non-Latino adults (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). 
+While pursuing higher education has many positive externalities in our society, Latino students are lagging behind the rest of their peers in terms of college completion rates. According to Excelencia in Education, Latinos need to earn 6.2 million degrees by 2020 in order for the U.S. to be the top ranked in the world for college degree attainment [@ExcelenciainEducation]. In the U.S., 21% of Latino students ages 18 to 34 were enrolled in higher education in comparison to 24% of their white non-Latino peers [@ExcelenciainEducation]. In terms of degree attainment, 24% of Latino adults who were 25 years of age or older earned an associate’s degree or higher, in comparson to 46% of white non-Latino adults [@ExcelenciainEducation]. 
 
-California has the largest Latino population and Latinos graduate from 4-year institutions of higher education at higher rates nationally  (https://www.edexcelencia.org/research/latino-college-completion/california). Yet, California is behind in the number of Latino students who complete a college education (https://www.edexcelencia.org/research/latino-college-completion/california). About 43% of Latino students are represented in California’s public higher education system, 61% of California’s Latino population lives in Southern California, 40% of Latinos attended college, and 60% of Latinos did not attend college (https://collegecampaign.org/wp-content/uploads/2021/11/FINAL-SHE-Latinx-web.pdf). In terms of bachelor degree attainment levels, Latinos have the lowest rates in comparison to other racial/ethnic subgroups in California. Thus, 6% and 14% of Latinos received an associate and bachelor’s degree or higher, respectively, in contrast to 9% and 46% of white students who received an associate and bachelor’s degree or higher, respectively (https://collegecampaign.org/wp-content/uploads/2021/11/FINAL-SHE-Latinx-web.pdf).  
+California has the largest Latino population and Latinos graduate from 4-year institutions of higher education at higher rates nationally [@ExcelenciainEducation]. Yet, California is behind in the number of Latino students who complete a college education [@ExcelenciainEducation]. About 43% of Latino students are represented in California’s public higher education system, 61% of California’s Latino population lives in Southern California, 40% of Latinos attended college, and 60% of Latinos did not attend college [@TheCampaignforCollegeOpportunity]. In terms of bachelor degree attainment levels, Latinos have the lowest rates in comparison to other racial/ethnic subgroups in California. Thus, 6% and 14% of Latinos received an associate and bachelor’s degree or higher, respectively, in contrast to 9% and 46% of white students who received an associate and bachelor’s degree or higher, respectively [@TheCampaignforCollegeOpportunity].  
 
-Even though this data is alarming, there are institutions where Latino students have been able to successfully enroll and graduate from 2 and 4-year institutions. In Fall 2018, Miami Dade College (public, 4-year institution), Florida International University (public, 4-year institution), South Texas College (public, 4-year institution), Lone Star College System (public, 2-year institution), and El Paso Communtiy College (public, 2-year institution) were the top institutions that enrolled the most number of Latino undergraduate students (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf ; U.S. Department of Education, National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS), 2018 Fall Enrollment, Graduation Rates Survey and Institutional Characteristics Survey.). In terms of the most associate degrees awarded to Latino students, Miami Dade College awarded 6,670 degrees, followed by South Texas College (3,923), El Paso Community College (2,975), Lone Star College System (2,654), and Valencia College (2,574) (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). Furthermore, in terms of bachelor degrees awarded to Latino students, the top five institutions included Florida International University (6,764), California State University, Fullerton (3,660), The University of Texas Rio Grande Valley (3,618), California State University, Northridge (3,573), and California State University, Long Beach (3,417) (https://www.edexcelencia.org/sites/default/files/LCCStateStats/Exc-2020-50StateFS-USA-05.pdf). Although these institutions have done great work in ensuring that more Latino students are enrolling and completing their associate and bachelor degrees, we still have a long way to go to ensure that Latino students across the U.S. feel supported to continue their education. 
+Even though this data is alarming, there are institutions where Latino students have been able to successfully enroll and graduate from 2 and 4-year institutions. In Fall 2018, Miami Dade College (public, 4-year institution), Florida International University (public, 4-year institution), South Texas College (public, 4-year institution), Lone Star College System (public, 2-year institution), and El Paso Communtiy College (public, 2-year institution) were the top institutions that enrolled the most number of Latino undergraduate students [@ExcelenciainEducation] (U.S. Department of Education, National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS), 2018 Fall Enrollment, Graduation Rates Survey and Institutional Characteristics Survey.). In terms of the most associate degrees awarded to Latino students, Miami Dade College awarded 6,670 degrees, followed by South Texas College (3,923), El Paso Community College (2,975), Lone Star College System (2,654), and Valencia College (2,574) [@ExcelenciainEducation]. Furthermore, in terms of bachelor degrees awarded to Latino students, the top five institutions included Florida International University (6,764), California State University, Fullerton (3,660), The University of Texas Rio Grande Valley (3,618), California State University, Northridge (3,573), and California State University, Long Beach (3,417) [@ExcelenciainEducation]. Although these institutions have done great work in ensuring that more Latino students are enrolling and completing their associate and bachelor degrees, we still have a long way to go to ensure that Latino students across the U.S. feel supported to continue their education. 
 
 First-Generation College Students:
 
-It is especially important for first-generation college students to complete a higher education degree because it would allow them to start building generational wealth and allow them to acquire the foundational skills to move up in the economic ladder. To put things into perspective, the average median wealth of households that are headed by a first-generation college graduate is about $152,000, which is behind that of a second-generation college graduate, who has a median wealth of about $135,800 (https://www.pewresearch.org/social-trends/2021/05/18/first-generation-college-graduates-lag-behind-their-peers-on-key-economic-outcomes/). In terms of average median household income, a first-generation college graduate earns about $99,600, which is lower than the income of a second-generation graduate, who earns about $135,800 (https://www.pewresearch.org/social-trends/2021/05/18/first-generation-college-graduates-lag-behind-their-peers-on-key-economic-outcomes/). Therefore, it is important to ensure that Latinos who identify as first-generation college students enroll and persist in higher education so that they can reap the benefits from a higher education degree and build generational wealth. Unfortunately, the statistics are not the best when it comes to adults who did not graduate from college. According to the Pew Research Center, “Among adults who have not graduated from college, there is no substantial economic boost associated with having a parent with at least a bachelor’s degree” (https://www.pewresearch.org/social-trends/2021/05/18/first-generation-college-graduates-lag-behind-their-peers-on-key-economic-outcomes/).
-
-## SUMMARY
-In every county that is heavily populated by Latinx folks, the percent of students with a bachelor's degree or higher has increased over the last 10 years.
-
-Across all the counties analyzed, the percent of Latina educational levels (bachelor's degree or higher) are greater than it is for Latinos.
-
-Nativity/Legal status over time in the United States:
-FL and NY Latinos have higher educational attainment, but they are more likely to be citizens or descended from citizens (e.g., Cubans in FL, Puerto Ricans in NY, etc.).
-In contrast, TX and CA tend to have more non-citizen Latinos and first-generation students (e.g., Mexicans, Central Americans, etc.).
+It is especially important for first-generation college students to complete a higher education degree because it would allow them to start building generational wealth and allow them to acquire the foundational skills to move up in the economic ladder. To put things into perspective, the average median wealth of households that are headed by a first-generation college graduate is about $152,000, which is behind that of a second-generation college graduate, who has a median wealth of about $135,800 [@PewResearchCenter]. In terms of average median household income, a first-generation college graduate earns about $99,600, which is lower than the income of a second-generation graduate, who earns about $135,800 [@PewResearchCenter]. Therefore, it is important to ensure that Latinos who identify as first-generation college students enroll and persist in higher education so that they can reap the benefits from a higher education degree and build generational wealth. Unfortunately, the statistics are not the best when it comes to adults who did not graduate from college. According to the Pew Research Center, “Among adults who have not graduated from college, there is no substantial economic boost associated with having a parent with at least a bachelor’s degree” [@PewResearchCenter].
 	
 ## LATINX EDUCATION ATTAINMENT BY GENDER (2012-2020)
+
+### ACS1 - Latinx Education Attainment Rates in California, Texas, Florida, and New York States (2012-2020)
+I used the ACS 1-year and ACS 5-year level data to determine the educational attainment rates of Latinx students between 2012 and 2020 in the following states: California, Texas, Florida, and New York. All of these states have seen an increase in the Latinx population since 2010. Therefore, I want to generate line graphs of the educational attainment rates of Latinx students in each state individually and then compare them against each other to analyze any patterns in the educational rates of each state. 
+
+```{r temp-edu-attain1, fig.cap= "ACS 1-Year Level Data: Latinx Education Attainment Rates in California, Texas, Florida, and New York States (2012-2020)"}
+## acs1 - education attainment, state level
+temp_edu_attain1 <- acs1_state_data %>% 
+  select(GEOID, NAME, YEAR, matches("C15002I_\\d+E")) %>% 
+  mutate(C15002I_012E = C15002I_003E + C15002I_008E,
+         C15002I_013E = C15002I_004E + C15002I_009E,
+         C15002I_014E = C15002I_005E + C15002I_010E,
+         C15002I_015E = C15002I_006E + C15002I_011E) %>%
+  pivot_longer(
+    cols = -c(GEOID, NAME, YEAR),           
+    names_to = 'attainment',         
+    values_to = 'values') %>%
+  mutate(gender = case_when(attainment %in%
+                              c("C15002I_002E", "C15002I_003E", "C15002I_004E", "C15002I_005E", "C15002I_006E") ~ "male",
+                            attainment %in%
+                              c("C15002I_007E", "C15002I_008E", "C15002I_009E", "C15002I_010E", "C15002I_011E") ~ "female",
+                            TRUE ~ "total"
+  ),
+  education_level = case_when(attainment %in%
+                                c("C15002I_003E", "C15002I_008E", "C15002I_012E") ~ "less than a high school diploma",
+                              attainment %in%
+                                c("C15002I_004E", "C15002I_009E", "C15002I_013E") ~ "high school graduate",
+                              attainment %in%
+                                c("C15002I_005E", "C15002I_010E", "C15002I_014E") ~ "some college or associate’s degree",
+                              attainment %in%
+                                c("C15002I_006E", "C15002I_011E", "C15002I_015E") ~ "bachelor’s degree or higher",
+                              TRUE ~ "total")
+  ) %>% 
+  filter(education_level != "total", gender != "total") %>%
+  group_by(GEOID, NAME, YEAR, gender) %>% 
+  mutate(pct = values/sum(values))
+# graph, states: CA, TX, FL, NY
+temp_edu_attain1 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York")) %>%
+  ggplot(aes(x = YEAR, y = pct, color = education_level, linetype = gender)) + geom_line() + facet_wrap(~ NAME) +
+  xlab('Year') + ylab('Percent of Latinx') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_y_continuous(labels = label_percent(accuracy = 1))
+```
+In Figure \@ref(fig:temp-edu-attain1), we can see the Latinx Education Attainment Rates for California, Florida, New York, and Texas between 2012-2020. In these graphs we can see that among the four states, there is a higher percentage of Latinx students obtaining bachelor’s degrees or higher in Florida, followed by New York, Texas and California and in all states more Latina women are obtaining these degrees. Among the four states, California has the most Latinx students obtaining less than high school diplomas, with a higher percentage of Latino males obtaining these diplomas.
 
 ### ACS5 - Latinx Education Attainment Rates in California, Texas, Florida, and New York States (2012-2020)
 ```{r temp-edu-attain9, fig.cap= "ACS 5-Year Level Data: Latinx Education Attainment Rates in California, Texas, Florida and New York States (2012-2020)"}
@@ -118,10 +155,11 @@ temp_edu_attain4 %>% filter(NAME %in% c("California", "Texas", "Florida", "New Y
 ```
 In Figure \@ref(fig:temp-edu-attain9), we can see the Latinx Education Attainment Rates for California, Florida, New York, and Texas between 2012-2020 using the ACS 5-year level data. Again, the line graphs seem to reflect the same trends as the previous line graph in Figure \@ref(fig:temp-edu-attain8).
 
+
 ## LATINX ENROLLNMENT IN NURSERY SCHOOL, K-12, COLLEGE/UNIVERSITIES, AND GRADUATE OR PROFESSIONAL SCHOOL (2012-2020)
 
 ### ACS1 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)
-```{r temp-edu-attain17, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)"}
+```{r temp-edu-enr17, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs1 - education enrollment, state level
 temp_edu_enr7 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -151,7 +189,8 @@ temp_edu_enr7 %>% filter(NAME %in% c("California", "Texas", "Florida", "New York
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr17),
+In Figure \@ref(fig:temp-edu-enr17), we can see that there are a larger percent of Latinx students enrolled in K-12 school across California, Texas, Florida, and New York. On the other hand, these graphs also indicate that there are very few Latinx students enrolled in nursery school and graduate or professional school in California, Texas, Florida, and New York. 
+
 
 ### ACS5 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)
 ```{r temp-edu-enr25, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)"}
@@ -184,7 +223,8 @@ temp_edu_enr10 %>% filter(NAME %in% c("California", "Texas", "Florida", "New Yor
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr25),
+In Figure \@ref(fig:temp-edu-enr25), we can see the Latinx enrollment rates in nursery school, K-12, college/universities, and graduate or professional school in California, Texas, Florida, and New York.
+
 
 ## ENROLLMENT RATES IN NURSERY SCHOOL BY RACE/ETHNICITY (2012-2020)
 
@@ -357,7 +397,6 @@ temp_edu_enr_race19 %>% filter(NAME %in% c("California", "Texas", "Florida", "Ne
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr49),
-
 
 ## COMPARISON GROUPS: COLLEGE/UNIVERSITY ENROLLMENT RATES BY RACE/ETHNICITY IN CALIFORNIA, TEXAS, FLORIDA, AND NEW YORK (2012-2020)
 
@@ -1058,3 +1097,8 @@ acs5_state_comp_data %>% filter(NAME %in% c('California', 'Florida', 'New York',
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
 In Figure \@ref(fig:temp-edu-enr80), the graphs depict the graduate or professional school enrollment rates of Latinx students (ages 18 to 24) in comparison to the population of Latinx students in California, Texas, Florida, and New York. In California, there is a low percent of Latinx students who are enrolled in graduate or professional school in comparison to the percent of Latinx students; there is also a large gap between the percent of Latinx students enrolled in graduate or professional school and the Latinx population. 
+
+## REFERENCES
+```{r}
+
+```

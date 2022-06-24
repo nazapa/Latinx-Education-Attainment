@@ -8,7 +8,7 @@ output:
   bookdown::html_document2:
     toc: true
     toc_float: true
-    theme: united
+    theme: yeti
     toc_depth: 2
     number_sections: false
     link-citations: yes
@@ -55,27 +55,23 @@ I would like to thank Professor Ozan Jaquette and Crystal Han for their support 
     b. How has the educational enrollment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the metropolitan level?
     c. How has the educational enrollment for Latinx students changed in the past 8 years (e.g., 2012-2020) at the county level?
 
-## LATINX STUDENT EDUCATIONAL OUTCOMES
-Latino students are expected to increase by 25% by 2030 [@ExcelenciainEducation]. Now more than ever, it is important to create policies and programs that increase higher education completion rates of Latino students to put them on the pathway for shared economic prosperity [@ExcelenciainEducation].  A college graduate with a bachelor’s degree is 24% more likely to be employed and earn about $32,000 annually and $1 million higher over a lifetime (https://www.aplu.org/our-work/5-archived-projects/college-costs-tuition-and-financial-aid/publicuvalues/societal-benefits.html). In 2019, the average median income for recent college graduates with a bachelor’s degree was about $44,000 per year, in comparison to high school graduates who had an average median income earning of about $33,000 per year (https://www.aplu.org/our-work/5-archived-projects/college-costs-tuition-and-financial-aid/publicuvalues/societal-benefits.html). Those who obtain a bachelor’s degree are more than twice as likely to volunteer, contribute about 3.5 times more money to charity, and 75% vote in presidential elections. College graduates are also less likely to rely on government assistance programs such as medicaid, housing subsidies, nutrition assistance, unemployment benefits, etc (https://www.aplu.org/our-work/5-archived-projects/college-costs-tuition-and-financial-aid/publicuvalues/societal-benefits.html). Furthermore, college graduates are 3.5 times less likely to be impoverished and about 5 times less likely to be in prison. It is evident that there are many benefits for students to pursue a higher education degree, which means that these opportunities can be even greater for Latino students.
+## SUMMARY OF FINDINGS
+In every county that is heavily populated by Latinx folks, the percent of students with a bachelor's degree or higher has increased over the last 10 years. Across all the counties analyzed, the percent of Latina educational levels (bachelor's degree or higher) are greater than it is for Latinos. In terms of Nativity/Legal status over time in the United States, Latinos in FL and NY have higher educational attainment, but they are more likely to be citizens or descended from citizens (e.g., Cubans in FL, Puerto Ricans in NY, etc.). In contrast, TX and CA tend to have more non-citizen Latinos and first-generation students (e.g., Mexicans, Central Americans, etc.).
+
+## BACKGROUND: LATINX STUDENT EDUCATIONAL OUTCOMES
+Latino students are expected to increase by 25% by 2030 [@ExcelenciainEducation]. Now more than ever, it is important to create policies and programs that increase higher education completion rates of Latino students to put them on the pathway for shared economic prosperity [@ExcelenciainEducation].  A college graduate with a bachelor’s degree is 24% more likely to be employed and earn about $32,000 annually and $1 million higher over a lifetime [@AssociationofPublicandLand-GrantUniversities]. In 2019, the average median income for recent college graduates with a bachelor’s degree was about $44,000 per year, in comparison to high school graduates who had an average median income earning of about $33,000 per year [@AssociationofPublicandLand-GrantUniversities]. Those who obtain a bachelor’s degree are more than twice as likely to volunteer, contribute about 3.5 times more money to charity, and 75% vote in presidential elections. College graduates are also less likely to rely on government assistance programs such as medicaid, housing subsidies, nutrition assistance, unemployment benefits, etc [@AssociationofPublicandLand-GrantUniversities]. Furthermore, college graduates are 3.5 times less likely to be impoverished and about 5 times less likely to be in prison. It is evident that there are many benefits for students to pursue a higher education degree, which means that these opportunities can be even greater for Latino students.
 
 Latino Students & Higher Education Completion Rates:
 
 While pursuing higher education has many positive externalities in our society, Latino students are lagging behind the rest of their peers in terms of college completion rates. According to Excelencia in Education, Latinos need to earn 6.2 million degrees by 2020 in order for the U.S. to be the top ranked in the world for college degree attainment [@ExcelenciainEducation]. In the U.S., 21% of Latino students ages 18 to 34 were enrolled in higher education in comparison to 24% of their white non-Latino peers [@ExcelenciainEducation]. In terms of degree attainment, 24% of Latino adults who were 25 years of age or older earned an associate’s degree or higher, in comparson to 46% of white non-Latino adults [@ExcelenciainEducation]. 
 
-California has the largest Latino population and Latinos graduate from 4-year institutions of higher education at higher rates nationally [@ExcelenciainEducation]. Yet, California is behind in the number of Latino students who complete a college education [@ExcelenciainEducation]. About 43% of Latino students are represented in California’s public higher education system, 61% of California’s Latino population lives in Southern California, 40% of Latinos attended college, and 60% of Latinos did not attend college (https://collegecampaign.org/wp-content/uploads/2021/11/FINAL-SHE-Latinx-web.pdf). In terms of bachelor degree attainment levels, Latinos have the lowest rates in comparison to other racial/ethnic subgroups in California. Thus, 6% and 14% of Latinos received an associate and bachelor’s degree or higher, respectively, in contrast to 9% and 46% of white students who received an associate and bachelor’s degree or higher, respectively (https://collegecampaign.org/wp-content/uploads/2021/11/FINAL-SHE-Latinx-web.pdf).  
+California has the largest Latino population and Latinos graduate from 4-year institutions of higher education at higher rates nationally [@ExcelenciainEducation]. Yet, California is behind in the number of Latino students who complete a college education [@ExcelenciainEducation]. About 43% of Latino students are represented in California’s public higher education system, 61% of California’s Latino population lives in Southern California, 40% of Latinos attended college, and 60% of Latinos did not attend college [@TheCampaignforCollegeOpportunity]. In terms of bachelor degree attainment levels, Latinos have the lowest rates in comparison to other racial/ethnic subgroups in California. Thus, 6% and 14% of Latinos received an associate and bachelor’s degree or higher, respectively, in contrast to 9% and 46% of white students who received an associate and bachelor’s degree or higher, respectively [@TheCampaignforCollegeOpportunity].  
 
 Even though this data is alarming, there are institutions where Latino students have been able to successfully enroll and graduate from 2 and 4-year institutions. In Fall 2018, Miami Dade College (public, 4-year institution), Florida International University (public, 4-year institution), South Texas College (public, 4-year institution), Lone Star College System (public, 2-year institution), and El Paso Communtiy College (public, 2-year institution) were the top institutions that enrolled the most number of Latino undergraduate students [@ExcelenciainEducation] (U.S. Department of Education, National Center for Education Statistics (NCES), Integrated Postsecondary Education Data System (IPEDS), 2018 Fall Enrollment, Graduation Rates Survey and Institutional Characteristics Survey.). In terms of the most associate degrees awarded to Latino students, Miami Dade College awarded 6,670 degrees, followed by South Texas College (3,923), El Paso Community College (2,975), Lone Star College System (2,654), and Valencia College (2,574) [@ExcelenciainEducation]. Furthermore, in terms of bachelor degrees awarded to Latino students, the top five institutions included Florida International University (6,764), California State University, Fullerton (3,660), The University of Texas Rio Grande Valley (3,618), California State University, Northridge (3,573), and California State University, Long Beach (3,417) [@ExcelenciainEducation]. Although these institutions have done great work in ensuring that more Latino students are enrolling and completing their associate and bachelor degrees, we still have a long way to go to ensure that Latino students across the U.S. feel supported to continue their education. 
 
 First-Generation College Students:
 
-It is especially important for first-generation college students to complete a higher education degree because it would allow them to start building generational wealth and allow them to acquire the foundational skills to move up in the economic ladder. To put things into perspective, the average median wealth of households that are headed by a first-generation college graduate is about $152,000, which is behind that of a second-generation college graduate, who has a median wealth of about $135,800 (https://www.pewresearch.org/social-trends/2021/05/18/first-generation-college-graduates-lag-behind-their-peers-on-key-economic-outcomes/). In terms of average median household income, a first-generation college graduate earns about $99,600, which is lower than the income of a second-generation graduate, who earns about $135,800 (https://www.pewresearch.org/social-trends/2021/05/18/first-generation-college-graduates-lag-behind-their-peers-on-key-economic-outcomes/). Therefore, it is important to ensure that Latinos who identify as first-generation college students enroll and persist in higher education so that they can reap the benefits from a higher education degree and build generational wealth. Unfortunately, the statistics are not the best when it comes to adults who did not graduate from college. According to the Pew Research Center, “Among adults who have not graduated from college, there is no substantial economic boost associated with having a parent with at least a bachelor’s degree” (https://www.pewresearch.org/social-trends/2021/05/18/first-generation-college-graduates-lag-behind-their-peers-on-key-economic-outcomes/).
-
-## SUMMARY
-In every county that is heavily populated by Latinx folks, the percent of students with a bachelor's degree or higher has increased over the last 10 years.
-
-Across all the counties analyzed, the percent of Latina educational levels (bachelor's degree or higher) are greater than it is for Latinos.
-
-Nativity/Legal status over time in the United States: FL and NY Latinos have higher educational attainment, but they are more likely to be citizens or descended from citizens (e.g., Cubans in FL, Puerto Ricans in NY, etc.). In contrast, TX and CA tend to have more non-citizen Latinos and first-generation students (e.g., Mexicans, Central Americans, etc.).
+It is especially important for first-generation college students to complete a higher education degree because it would allow them to start building generational wealth and allow them to acquire the foundational skills to move up in the economic ladder. To put things into perspective, the average median wealth of households that are headed by a first-generation college graduate is about $152,000, which is behind that of a second-generation college graduate, who has a median wealth of about $135,800 [@PewResearchCenter]. In terms of average median household income, a first-generation college graduate earns about $99,600, which is lower than the income of a second-generation graduate, who earns about $135,800 [@PewResearchCenter]. Therefore, it is important to ensure that Latinos who identify as first-generation college students enroll and persist in higher education so that they can reap the benefits from a higher education degree and build generational wealth. Unfortunately, the statistics are not the best when it comes to adults who did not graduate from college. According to the Pew Research Center, “Among adults who have not graduated from college, there is no substantial economic boost associated with having a parent with at least a bachelor’s degree” [@PewResearchCenter].
 	
 ## LATINX EDUCATION ATTAINMENT BY GENDER (2012-2020)
 
@@ -497,7 +493,7 @@ In Figure \@ref(fig:temp-edu-attain16), we can see that there is a higher percen
 ## LATINX ENROLLNMENT IN NURSERY SCHOOL, K-12, COLLEGE/UNIVERSITIES, AND GRADUATE OR PROFESSIONAL SCHOOL (2012-2020)
 
 ### ACS1 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)
-```{r temp-edu-attain17, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)"}
+```{r temp-edu-enr17, fig.cap= "ACS 1-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in California, Texas, Florida, and New York States (2012-2020)"}
 ## acs1 - education enrollment, state level
 temp_edu_enr7 <- acs1_state_data %>% 
   select(GEOID, NAME, YEAR, matches("B14007I_\\d+E")) %>% 
@@ -699,7 +695,7 @@ temp_edu_enr10 %>% filter(NAME %in% c("California", "Texas", "Florida", "New Yor
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr25),
+In Figure \@ref(fig:temp-edu-enr25), we can see the Latinx enrollment rates in nursery school, K-12, college/universities, and graduate or professional school in California, Texas, Florida, and New York.
 
 ### ACS5 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles-Long Beach-Anaheim, CA Metro Area; New York-Newark-Jersey City, NY-NJ-PA Metro Area; Miami-Fort Lauderdale-West Palm Beach, FL Metro Area; Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area; and Providence-Warwick, RI-MA Metro Area (2012-2020)
 ```{r temp-edu-enr26, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles-Long Beach-Anaheim, CA Metro Area (2012-2020)"}
@@ -732,7 +728,7 @@ temp_edu_enr11 %>% filter(NAME == "Los Angeles-Long Beach-Anaheim, CA Metro Area
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr26),
+In Figure \@ref(fig:temp-edu-enr26), we can see the Latinx enrollment rates in nursery school, K-12, college/universities, and graduate or professional school in the Los Angeles-Long Beach-Anaheim, CA Metro Area.
 
 ```{r temp-edu-enr27, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in New York-Newark-Jersey City, NY-NJ-PA Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro Area") %>%
@@ -741,7 +737,7 @@ temp_edu_enr11 %>% filter(NAME == "New York-Newark-Jersey City, NY-NJ-PA Metro A
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr27),
+In Figure \@ref(fig:temp-edu-enr27), we can see the Latinx enrollment rates in nursery school, K-12, college/universities, and graduate or professional school in the New York-Newark-Jersey City, NY-NJ-PA Metro Area.
 
 ```{r temp-edu-enr28, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Miami-Fort Lauderdale-West Palm Beach, FL Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area") %>%
@@ -750,7 +746,7 @@ temp_edu_enr11 %>% filter(NAME == "Miami-Fort Lauderdale-West Palm Beach, FL Met
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr28),
+In Figure \@ref(fig:temp-edu-enr28), we can see the Latinx enrollment rates in nursery school, K-12, college/universities, and graduate or professional school in the Miami-Fort Lauderdale-West Palm Beach, FL Metro Area.
 
 ```{r temp-edu-enr29, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area") %>%
@@ -759,7 +755,7 @@ temp_edu_enr11 %>% filter(NAME == "Washington-Arlington-Alexandria, DC-VA-MD-WV 
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr29),
+In Figure \@ref(fig:temp-edu-enr29), we can see the Latinx enrollment rates in nursery school, K-12, college/universities, and graduate or professional school in the Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area.
 
 ```{r temp-edu-enr30, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Providence-Warwick, RI-MA Metro Area (2012-2020)"}
 temp_edu_enr11 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
@@ -768,7 +764,7 @@ temp_edu_enr11 %>% filter(NAME == "Providence-Warwick, RI-MA Metro Area") %>%
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr30),
+In Figure \@ref(fig:temp-edu-enr30), we can see the Latinx enrollment rates in nursery school, K-12, college/universities, and graduate or professional school in the Providence-Warwick, RI-MA Metro Area.
 
 ### ACS5 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)
 ```{r temp-edu-enr31, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA (2012-2020)"}
@@ -801,7 +797,7 @@ temp_edu_enr12 %>% filter(NAME %in% c("Los Angeles County, California", "Cook Co
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr31),
+In Figure \@ref(fig:temp-edu-enr31), we can see the Latinx enrollment rates in nursery school, K-12, college/universities, and graduate or professional school in the Los Angeles County, CA, Cook County, IL, Maricopa County, AZ, Orange County, CA, Bexar County, TX, Riverside County, CA, San Bernardino County, CA, and San Diego County, CA.
 
 ### ACS5 - Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County (2012-2020)
 ```{r temp-edu-enr32, fig.cap= "ACS 5-Year Level Data: Latinx Enrollment Rates in Nursery, K-12, College/Universities, and Graduate or Professional School in Los Angeles County, CA (2012-2020)"}
@@ -835,7 +831,7 @@ temp_edu_enr12 %>% filter(NAME == "Los Angeles County, California") %>%
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_y_continuous(labels = label_percent(accuracy = 1))
 ```
-In Figure \@ref(fig:temp-edu-enr32),
+In Figure \@ref(fig:temp-edu-enr32), we can see the Latinx enrollment rates in nursery school, K-12, college/universities, and graduate or professional school in the Los Angeles County, CA.
 
 ## ENROLLMENT RATES IN NURSERY SCHOOL BY RACE/ETHNICITY (2012-2020)
 
